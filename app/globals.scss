@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+//--------------------VARIABLES-------------------//
+$colorNegro: #262626;
+$colorAmarillo: #dbab1e;
+$colorBlanco: #fff;
+//--------------------MIXIN----------------------//
+@mixin containerII {
+  background-color: $colorNegro;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0 10%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: $colorBlanco;
+  padding: 3rem 1.5rem;
+}
+@mixin containerIII {
+  display: flex;
+  flex-direction: column;
+  background-color: $colorNegro;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+@mixin smallContainer($justifi) {
+  min-height: 70vh;
+  width: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: $justifi;
+  @media only screen and (max-width: 1199px) {
+    min-height: 60vh;
+    width: 35vh;
+  }
+  @media only screen and (max-width: 400px) {
+    height: 55vh;
+    width: 30vh;
+  }
+}
+@mixin titulos($tamanio, $margen, $largoLinea, $color) {
+  color: #fff;
+  font-size: $tamanio;
+  margin: $margen;
+  position: relative;
+  letter-spacing: 2px;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -23px;
+    height: 8px;
+    width: $largoLinea;
+    left: 0;
+    background-color: $color;
+  }
+}
+@mixin titilosII($largo, $tamFuente) {
+  line-height: 24px;
+  margin: 1rem 0 2.5rem 0;
+  font-size: $tamFuente;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    width: $largo;
+    height: 8px;
+    background-color: #dbab1e;
+  }
+}
+@mixin iconsModal($pading) {
+  padding: $pading;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,318 @@
+@import "../../globals.scss";
+
+//---------------HERO-----------------//
+.heroPages {
+  position: relative;
+  min-height: 100vh;
+  background-color: aqua;
+  .videoB {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .capa {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #262626;
+    opacity: 0.7;
+  }
+  .items {
+    padding-top: 28vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+  }
+  .h1Sale {
+    font-size: 5vw;
+    letter-spacing: 8px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .heroPages {
+    min-height: 75vh;
+  }
+  .items {
+    padding-top: 18vh;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .heroPages {
+    min-height: 60vh;
+  }
+  .h1Sale {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0 1rem 0 1rem;
+  }
+  .items {
+    padding-top: 12vh;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .items {
+    padding-top: 8vh;
+  }
+}
+//--------------------MAINSTATE---------------------//
+.containerState {
+  background-color: $colorNegro;
+}
+.containerSection {
+  @include containerII;
+}
+.contIndividual {
+  position: relative;
+  @include smallContainer(flex-end);
+}
+.img {
+  object-fit: contain;
+}
+.contIndividualDos {
+  @include smallContainer(space-around);
+}
+//-------------FILTROS SELECT-----------//
+.select-state {
+  background-color: $colorAmarillo;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border-style: none;
+  font-size: 1em;
+  font-weight: bolder;
+}
+.select-state:focus {
+  outline: none;
+}
+.spanText {
+  align-self: flex-start;
+  font-size: 0.9em;
+}
+.sectionBotones {
+  display: flex;
+  gap: 20px 30%;
+}
+.containerIII {
+  @include containerIII;
+}
+@media only screen and (max-width: 710px) {
+  .sectionBotones {
+    flex-direction: column;
+  }
+}
+//---------------CONTAINER CARD----------------//
+.containerCard {
+  @include containerIII;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+}
+.cardContainer {
+  position: relative;
+  color: #fff;
+  padding: 2rem;
+  flex-wrap: wrap;
+  display: flex;
+  min-height: 40vh;
+  min-width: 200px;
+  gap: 40px;
+  justify-content: center;
+}
+
+.imgContainer {
+  position: relative;
+  height: 55vh;
+  width: clamp(300px, 30vw, 750px);
+  .card-img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+.cardBoxContainer {
+  width: clamp(250px, 30vw, 750px);
+  height: 100%;
+  display: flex;
+  align-self: flex-end;
+  flex-direction: column;
+  @media only screen and (max-width: 653px) {
+    transform: translateX(-25px);
+  }
+}
+
+.tituloCard {
+  @include titulos(1.2em, 1rem, 60%, $colorAmarillo);
+}
+
+//---------------CUERPO DEL MODAL---------------//
+.modal-container {
+  position: absolute;
+  width: 100%;
+  padding: 3rem;
+  background-color: #262626;
+  color: #fff;
+  border-radius: 5px;
+  border-style: none;
+  display: flex;
+  flex-direction: column;
+  .modal-tilte {
+    @include titilosII(44%, clamp(1em, 1.5em, 3vw));
+  }
+  .modal-tilteII {
+    @include titilosII(15%, clamp(1em, 1.5em, 3vw));
+  }
+  .icons-modal {
+    @include iconsModal(2rem);
+    margin-top: 1rem;
+    @media only screen and (max-width: 442px) {
+      @include iconsModal(0.5rem);
+    }
+  }
+  .espacio {
+    align-self: flex-end;
+  }
+  .modal-sale-cont-h3 {
+    padding: 0.5rem 2rem 0.8rem 2rem;
+    border: 3px solid #dbab1e;
+    border-radius: 5px;
+    margin: 0;
+    @media (max-width: 991px) {
+      font-size: 1.3em;
+    }
+    @media (max-width: 400px) {
+      font-size: 1em;
+    }
+  }
+  .h5-modal {
+    font-size: 1.2em;
+    @media (max-width: 991px) {
+      font-size: 1em;
+    }
+  }
+  .info-modal-cont {
+    min-height: 24vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .modal-icons-cont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .icon {
+      margin-right: 1rem;
+      font-size: 1.5em;
+    }
+    p {
+      margin: 0;
+    }
+    @media (max-width: 991px) {
+      margin: 0.6rem;
+      .icon {
+        font-size: 1em;
+      }
+    }
+  }
+  .espacioB {
+    justify-content: space-between;
+  }
+  .modal-caracteristicas {
+    margin: 2rem 0;
+    padding: 0;
+  }
+  @media only screen and (max-width: 500px) {
+    padding: 1.5rem;
+  }
+}
+.Myswiper {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.imagen-cont {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: #dbab1e;
+  font-size: 3em;
+  font-weight: 700;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background-color: #dbab1e !important;
+}
+//-------------FORMULARIO MODAL--------------//
+.formOk {
+  width: 100%;
+  position: relative;
+  .form-control:focus {
+    box-shadow: inset 0 0 0 #dbab1e, 5px 5px 10px -5px #dbab1e;
+    border: 1px solid #dbab1e;
+  }
+  .errorOk {
+    padding-top: 0.5rem;
+    color: #dbab1e;
+  }
+}
+//-------------BTN WTS-------------//
+.btnWhats {
+  font-size: 2em;
+  text-align: center;
+  margin: 1rem 0;
+  cursor: pointer;
+  width: 7rem;
+  border: 4px solid #dbab1e;
+
+  background-color: #dbab1e;
+  padding: 0 0.4rem 0.4rem 0.5rem;
+  border-radius: 5px;
+  transition: 200ms ease-in-out;
+  z-index: 9;
+  &:hover {
+    background-color: transparent;
+  }
+  .btnlink {
+    color: #fff;
+  }
+  @media (max-width: 400px) {
+    width: 5rem;
+    font-size: 1.7em;
+  }
+}
+//----------Contactos extra form---------//
+.container-p {
+  padding: 1rem 0 1rem 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  @media (max-width: 400px) {
+    padding: 0.4rem;
+  }
+}
+.contacto-container {
+  text-align: center;
+  color: #dbab1e;
+  margin: 0 0 0 1rem;
+  @media (max-width: 991px) {
+    margin: 1rem;
+  }
+  @media (max-width: 420px) {
+    margin: 0.5rem;
+  }
+}
