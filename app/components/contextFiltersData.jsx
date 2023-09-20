@@ -13,7 +13,7 @@ export function FilterProvider({ children }) {
 
   const fetchData = async () => {
     let offset = (page - 1) * limit;
-    let url = `https://www.tokkobroker.com/api/v1/property/?lang=es_ar&offset=${offset}&limit=${limit}&key=6364f88ef8fab03a542837a002e64525689ad2bd&format=json`;
+    let url = `:)`;
 
     const response = await fetch(url, { cache: "force-cache" });
     const data = await response.json();

@@ -14,26 +14,15 @@ const Filtros = () => {
 
   const {
     inmuebles,
-
     setInmuebles,
-
     fetchData,
     setDisableBut,
     setLimit,
     limit,
     setFiltro,
-
     setActivo,
   } = useContext(FiltersContextData);
   console.log(limit);
-
-  useEffect(() => {
-    // Si el límite cambia, realizar una nueva solicitud
-    if (!search) {
-      fetchData();
-      setSearch(true);
-    }
-  }, [limit]);
 
   //FECH para los filtros//
   // useEffect(() => {
@@ -64,6 +53,13 @@ const Filtros = () => {
     setSearch(false);
     setLimit(80);
   };
+  useEffect(() => {
+    if (limit === 80) {
+      fetchData();
+      setSearch(true);
+    }
+  }, [limit]);
+
   const handleSelectLocal = (e) => {
     setLocal(e.target.value);
     setSearch(false);
