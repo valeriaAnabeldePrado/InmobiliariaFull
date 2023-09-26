@@ -106,7 +106,9 @@ const Formulario = () => {
           </Form.Text>
         </Form.Group>
 
-        <button type="submit">ENVIAR</button>
+        <button className="boton2" type="submit">
+          ENVIAR
+        </button>
         <BtnWhats />
       </form>
       {response && <AlertMnsj />}

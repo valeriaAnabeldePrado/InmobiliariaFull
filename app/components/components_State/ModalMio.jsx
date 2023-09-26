@@ -278,16 +278,26 @@ const ModalMio = ({ setModalShow, datosCard, setDatosCard, modalShow }) => {
                     </div>
                   )}
                 </section>
-                <hr />
-                <p style={{ margin: "1rem 0 1rem 0" }}>
-                  Si desea mas informacion sobre esta propiedad, porfavor,
-                  rellene el siguiente formulario.
-                </p>
-                <Formulario />
-                <Contacto />
-                <button onClick={handleClose}>cerrar</button>
               </div>
             )}
+            <hr />
+            <p style={{ margin: "1rem 0 1rem 0" }}>
+              Si desea mas informacion sobre esta propiedad, porfavor, rellene
+              el siguiente formulario.
+            </p>
+            <Formulario />
+            <Contacto />
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "flex-end",
+                margin: "2rem 1rem 1rem 1rem",
+              }}
+            >
+              <button className="boton2" onClick={handleClose}>
+                cerrar
+              </button>
+            </div>
           </section>
         ))}
       </Modal>

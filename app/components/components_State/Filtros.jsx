@@ -13,7 +13,7 @@ const Filtros = () => {
   const [limiteFiltro, setLimiteFiltro] = useState(70);
   const [filtroInmueble, setFiltroInmueble] = useState([]);
 
-  const { fetchData, setFiltro, setActivo } = useContext(FiltersContextData);
+  const { setFiltro, setActivo, loadMore } = useContext(FiltersContextData);
 
   //FECH para los filtros//
   useEffect(() => {
@@ -128,7 +128,7 @@ const Filtros = () => {
             setTipo("");
             setRooms(0);
             setLocal("");
-            fetchData();
+            loadMore();
           }}
         >
           <span className="spanB">BORRAR</span>

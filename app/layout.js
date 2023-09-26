@@ -1,4 +1,4 @@
-import { FilterProvider } from "./components/contextFiltersData";
+//import { FilterProvider } from "./components/contextFiltersData";
 import "./globals.scss";
 import { Inter } from "next/font/google";
 
@@ -11,10 +11,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <FilterProvider>
-      <html lang="es">
-        <body className={inter.className}>{children}</body>
-      </html>
-    </FilterProvider>
+    <html lang="es">
+      <body className={inter.className}>{children}</body>
+    </html>
   );
 }
