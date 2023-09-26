@@ -10,55 +10,40 @@ const Filtros = () => {
   const [local, setLocal] = useState("");
   const [rooms, setRooms] = useState(0);
   const [search, setSearch] = useState(true);
-  // const [filtroInmueble, setFiltroInmueble] = useState([]);
+  const [limiteFiltro, setLimiteFiltro] = useState(70);
+  const [filtroInmueble, setFiltroInmueble] = useState([]);
 
-  const {
-    inmuebles,
-    setInmuebles,
-    fetchData,
-    setDisableBut,
-    setLimit,
-    limit,
-    setFiltro,
-    setActivo,
-  } = useContext(FiltersContextData);
-  console.log(limit);
+  const { fetchData, setFiltro, setActivo } = useContext(FiltersContextData);
 
   //FECH para los filtros//
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch(
-  //         `https://www.tokkobroker.com/api/v1/property/?lang=es_ar&offset=0&limit=${limit}&key=6364f88ef8fab03a542837a002e64525689ad2bd&format=json`
-  //       );
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `https://www.tokkobroker.com/api/v1/property/?lang=es_ar&offset=0&limit=${limiteFiltro}&key=6364f88ef8fab03a542837a002e64525689ad2bd&format=json`
+        );
 
-  //       if (!response.ok) {
-  //         throw new Error("Error al cargar los datos.");
-  //       }
+        if (!response.ok) {
+          throw new Error("Error al cargar los datos.");
+        }
 
-  //       const data = await response.json();
-  //       setFiltroInmueble(data.objects);
-  //     } catch (error) {
-  //       console.error("Error de solicitud:", error);
-  //     }
-  //   };
+        const data = await response.json();
+        setFiltroInmueble(data.objects);
+      } catch (error) {
+        console.error("Error de solicitud:", error);
+      }
+    };
 
-  //   fetchData();
-  // }, [limit]);
+    fetchData();
+  }, [limiteFiltro]);
 
-  //console.log(datosFiltradosOk);
+  console.log(filtroInmueble);
   //-----FUNCIONES FILTRO-----//
   const handleSelectTipo = (e) => {
     setTipo(e.target.value);
     setSearch(false);
-    setLimit(80);
+    setLimiteFiltro(100);
   };
-  useEffect(() => {
-    if (limit === 80) {
-      fetchData();
-      setSearch(true);
-    }
-  }, [limit]);
 
   const handleSelectLocal = (e) => {
     setLocal(e.target.value);
@@ -69,22 +54,21 @@ const Filtros = () => {
     setSearch(false);
   };
 
-  const handleSearch = (inmueble) => {
+  const handleSearch = (parametrofiltroInmueble) => {
     setSearch(true);
 
-    const resultadosFiltrados = inmueble
+    const resultadosFiltrados = parametrofiltroInmueble
       .filter((el) => el.type.name.toLowerCase().includes(tipo))
       .filter((el) => el.location.name.toLowerCase().includes(local))
       .filter((el) => rooms === 0 || el.suite_amount === rooms);
 
-    //setDatosFiltradosOk(resultadosFiltrados);
     setActivo(true);
     setFiltro(resultadosFiltrados);
   };
 
   return (
     <>
-      <span className="spanText">Tipo de propiedad</span>
+      <span className="spanText">Seleccion el tipo de propiedad</span>
       <select
         name="tipo"
         id="tipo"
@@ -98,7 +82,7 @@ const Filtros = () => {
         <option value="terreno">Terreno</option>
         <option value="local">Local</option>
       </select>
-      <span className="spanText">Ubicación</span>
+      <span className="spanText">Selecciona la ubicación</span>
       <select
         name="Ubicación"
         id="Ubicación"
@@ -113,7 +97,7 @@ const Filtros = () => {
         <option value="centro">Centro</option>
         <option value="alto alberdi">Alto Alberdi</option>
       </select>
-      <span className="spanText">Cantidad de habitaciones</span>
+      <span className="spanText">Selecciona la cantidad de habitaciones</span>
       <select
         name="Habitaciones"
         id="Habitaciones"
@@ -131,24 +115,23 @@ const Filtros = () => {
       <section className="sectionBotones">
         <button
           disabled={tipo == "" ? true : false}
-          // onClick={() => handleClick(datosFiltradosOk, filtroInmueble)}
-          onClick={() => handleSearch(inmuebles)}
+          onClick={() => handleSearch(filtroInmueble)}
+          className="boton"
         >
           BUSCAR
         </button>
 
         <button
+          className="boton"
           onClick={() => {
-            setLimit(10);
-            setDisableBut(false);
-            setInmuebles([]);
+            setActivo(false);
             setTipo("");
             setRooms(0);
             setLocal("");
-            setSearch(false);
+            fetchData();
           }}
         >
-          BORRAR
+          <span className="spanB">BORRAR</span>
         </button>
       </section>
     </>

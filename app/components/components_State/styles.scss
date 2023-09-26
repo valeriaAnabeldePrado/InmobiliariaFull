@@ -73,9 +73,10 @@
 .contIndividual {
   position: relative;
   @include smallContainer(flex-end);
+  margin-bottom: 2rem;
 }
 .img {
-  object-fit: contain;
+  object-fit: fill;
 }
 .contIndividualDos {
   @include smallContainer(space-around);
@@ -84,18 +85,36 @@
 .select-state {
   background-color: $colorAmarillo;
   color: #fff;
-  padding: 10px;
+  padding: 17px;
   border-radius: 5px;
   border-style: none;
   font-size: 1em;
   font-weight: bolder;
 }
+
 .select-state:focus {
   outline: none;
 }
 .spanText {
   align-self: flex-start;
-  font-size: 0.9em;
+  text-align: start;
+  font-size: 1em;
+  @media only screen and (max-width: 400px) {
+    padding: 0.5rem 0 0.5rem;
+  }
+}
+.boton {
+  @include boton(5rem);
+}
+.boton2 {
+  @include boton(5rem);
+  max-width: 12rem;
+}
+.centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0 3rem 0;
 }
 .sectionBotones {
   display: flex;
@@ -132,10 +151,32 @@
   position: relative;
   height: 55vh;
   width: clamp(300px, 30vw, 750px);
+  overflow: hidden;
   .card-img {
     height: 100%;
     max-width: 100%;
     object-fit: cover;
+    transition: 300ms ease-in;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+.inconCard {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 0.5rem 1rem 2rem 1rem;
+  .iconss {
+    display: flex;
+    flex-wrap: nowrap;
+    font-weight: 500;
+    font-size: 1.2rem;
+    align-items: center;
+    padding-right: 4rem;
+    .pp {
+      margin: 0 0 0 1rem;
+    }
   }
 }
 .cardBoxContainer {
@@ -166,6 +207,7 @@
   flex-direction: column;
   .modal-tilte {
     @include titilosII(44%, clamp(1em, 1.5em, 3vw));
+    
   }
   .modal-tilteII {
     @include titilosII(15%, clamp(1em, 1.5em, 3vw));

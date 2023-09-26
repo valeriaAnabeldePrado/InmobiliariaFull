@@ -5,7 +5,6 @@ export const FiltersContextData = createContext();
 
 export function FilterProvider({ children }) {
   const [inmuebles, setInmuebles] = useState([]);
-  const [disableBut, setDisableBut] = useState(false);
   const [limit, setLimit] = useState(10);
   const [page, setPage] = useState(1);
   const [filtro, setFiltro] = useState([]);
@@ -13,7 +12,7 @@ export function FilterProvider({ children }) {
 
   const fetchData = async () => {
     let offset = (page - 1) * limit;
-    let url = `:)`;
+    let url = `https://www.tokkobroker.com/api/v1/property/?lang=es_ar&offset=${offset}&limit=${limit}&key=6364f88ef8fab03a542837a002e64525689ad2bd&format=json`;
 
     const response = await fetch(url, { cache: "force-cache" });
     const data = await response.json();
@@ -27,7 +26,6 @@ export function FilterProvider({ children }) {
 
   const loadMore = () => {
     setPage((prevPage) => prevPage + 1);
-    console.log("paginaaa", page);
   };
 
   useEffect(() => {
@@ -42,8 +40,6 @@ export function FilterProvider({ children }) {
         setPage,
         fetchData,
         loadMore,
-        disableBut,
-        setDisableBut,
         setLimit,
         limit,
         setPage,

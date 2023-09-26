@@ -4,16 +4,23 @@ import { FiltersContextData } from "../contextFiltersData";
 import Image from "next/image";
 import "./styles.scss";
 import ModalMio from "./ModalMio";
+import { BsArrowsFullscreen } from "react-icons/bs";
+import { FaBed } from "react-icons/fa";
 
 const RenderCard = () => {
-  const { inmuebles, loadMore, disableBut, filtro, activo } =
+  const { inmuebles, loadMore, filtro, activo } =
     useContext(FiltersContextData);
+
   const [datosCard, setDatosCard] = useState(null);
   const [modalShow, setModalShow] = useState(false);
-  console.log(filtro);
+
   const handleOpenModal = (datoInmueble) => {
     setModalShow(true);
     setDatosCard(datoInmueble);
+  };
+  const handleClick = () => {
+    loadMore();
+    console.log("hola");
   };
 
   return (
@@ -34,7 +41,31 @@ const RenderCard = () => {
                 <section className="cardBoxContainer">
                   <h2 className="tituloCard">{el.publication_title}</h2>
                   <p>{el.real_addressn}</p>
-                  <button onClick={() => handleOpenModal(el)}>VER MAS</button>
+                  <hr />
+                  <div className="inconCard">
+                    {el.total_surface === "0.00" ? (
+                      ""
+                    ) : (
+                      <section className="iconss">
+                        <BsArrowsFullscreen className="icon" />
+                        <p className="pp">{el.total_surface}m²</p>
+                      </section>
+                    )}
+                    {el.suite_amount === 0 ? (
+                      ""
+                    ) : (
+                      <section className="iconss">
+                        <FaBed className="icon" />
+                        <p className="pp">{el.suite_amount}</p>
+                      </section>
+                    )}
+                  </div>
+                  <button
+                    className="boton2"
+                    onClick={() => handleOpenModal(el)}
+                  >
+                    VER MAS
+                  </button>
                 </section>
               </div>
             ))
@@ -52,13 +83,39 @@ const RenderCard = () => {
                 <section className="cardBoxContainer">
                   <h2 className="tituloCard">{el.publication_title}</h2>
                   <p>{el.real_addressn}</p>
-                  <button onClick={() => handleOpenModal(el)}>VER MAS</button>
+                  <hr />
+                  <div className="inconCard">
+                    {el.total_surface === "0.00" ? (
+                      ""
+                    ) : (
+                      <section className="iconss">
+                        <BsArrowsFullscreen className="icon" />
+                        <p className="pp">{el.total_surface}m²</p>
+                      </section>
+                    )}
+                    {el.suite_amount === 0 ? (
+                      ""
+                    ) : (
+                      <section className="iconss">
+                        <FaBed className="icon" />
+                        <p className="pp">{el.suite_amount}</p>
+                      </section>
+                    )}
+                  </div>
+                  <button
+                    className="boton2"
+                    onClick={() => handleOpenModal(el)}
+                  >
+                    VER MAS
+                  </button>
                 </section>
               </div>
             ))}
-        <div>
-          {!disableBut && (
-            <button onClick={loadMore}>Ver mar propiedades</button>
+        <div className="centrado">
+          {!activo && (
+            <button className="boton" onClick={handleClick}>
+              Ver mar propiedades
+            </button>
           )}
         </div>
         {modalShow && (

@@ -2,7 +2,7 @@ import React from "react";
 import "./components_State/styles.scss";
 import HeroStateSale from "./components_State/HeroStateSale";
 import Image from "next/image";
-import edimuestra from "../../public/Images/ediSale.webp";
+import edificioMuestra from "../../__MACOSX/public/Images/edificioMuestra.jpg";
 import Filtros from "./components_State/Filtros";
 import RenderCard from "./components_State/RenderCard";
 const StateSale = () => {
@@ -13,7 +13,7 @@ const StateSale = () => {
         <div className="containerSection">
           <section className="contIndividual">
             <Image
-              src={edimuestra}
+              src={edificioMuestra}
               fill
               alt="edificioMuestra"
               className="img"
