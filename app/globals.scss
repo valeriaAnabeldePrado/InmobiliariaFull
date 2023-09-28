@@ -6,6 +6,10 @@ body {
 $colorNegro: #262626;
 $colorAmarillo: #dbab1e;
 $colorBlanco: #fff;
+
+.fondo {
+  background-color: $colorNegro;
+}
 //--------------------MIXIN----------------------//
 @mixin containerII {
   background-color: $colorNegro;

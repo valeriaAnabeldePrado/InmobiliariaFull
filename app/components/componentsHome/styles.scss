@@ -1,0 +1,336 @@
+// Estilos de Hero ----------------------------------------------------------------
+@keyframes appearAnimation {
+  0% {
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-logo,
+.hero-text,
+.button2 {
+  opacity: 0;
+  animation: appearAnimation 1s ease forwards;
+}
+
+.hero-logo {
+  animation-delay: 0.2s;
+}
+
+.hero-text {
+  animation-delay: 0.6s;
+}
+
+.button2 {
+  animation-delay: 1s;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("../../../__MACOSX/public/Images/imagenesHome/fondo.webp")
+    no-repeat center top;
+  background-size: cover;
+}
+.hero-logo {
+  width: 800px;
+  position: relative;
+  z-index: 99999999;
+  @media only screen and (max-width: 900px) {
+    width: 80vw;
+  }
+}
+.hero-logo-img {
+  position: relative !important;
+  object-fit: cover;
+}
+
+.hero-text {
+  font-size: 1.4em;
+  font-weight: 300;
+  color: #fff;
+  width: 50vw;
+  text-align: center;
+  margin: 2rem 0rem;
+}
+
+// Descubre ----------------------------------------------------------------
+.descubre_container {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+.descubre_div {
+  min-width: 300px;
+  min-height: 380px;
+  height: 40vw;
+  position: relative;
+  width: 30vw;
+}
+.descubre_icons {
+  cursor: pointer;
+  font-size: 1.2rem;
+  position: relative;
+  opacity: 0;
+  transform: translate(-200px, 0);
+  display: flex;
+  flex-direction: row;
+  letter-spacing: 2px;
+  justify-content: space-between;
+  transition: 100ms ease-in-out;
+  &:hover {
+    color: #fff;
+  }
+}
+.descubre_icons h3::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 0;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s ease-in-out;
+}
+
+.descubre_icons h3:hover::after {
+  width: 100%;
+}
+
+.descubre_icons_container {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  justify-content: space-evenly;
+}
+
+// About ----------------------------------------------------------------
+
+.about_container {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about_div {
+  min-width: 300px;
+  min-height: 380px;
+  min-height: 40vw;
+  position: relative;
+  width: 30vw;
+  padding: 2rem;
+}
+.about_div_info {
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: space-around;
+}
+.images {
+  position: relative;
+}
+
+// tasas //
+
+.tasas_container {
+  color: #fff;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tasas_div {
+  width: 50%;
+  min-width: 300px;
+  position: relative;
+  padding: 2rem;
+}
+
+.tasas_ajust {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tasas_logo {
+  background-color: #fff;
+  position: relative !important;
+  object-fit: cover;
+}
+.maps {
+  margin-top: 40px;
+}
+// contact
+
+.contact_container {
+  color: #fff;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contact_div {
+  width: 50%;
+  min-width: 300px;
+  position: relative;
+  padding: 2rem;
+}
+
+.contact_logo {
+  background-color: "green";
+  position: relative !important;
+  object-fit: cover;
+}
+.ajust {
+  padding: 2rem;
+}
+
+.medios_icon {
+  text-decoration: none;
+  text-align: center;
+  font-size: x-large;
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+  margin: 1rem;
+  height: 26vh;
+  width: 25vh;
+  border: 4px solid #dbab1e;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0px 0px 0px 0px rgba(228, 193, 17, 0.684);
+  transition: 500ms ease-in-out;
+}
+.medios_icon:hover {
+  box-shadow: 0px 0px 21px 0px rgba(228, 193, 17, 0.684);
+  transform: scale(1.1);
+}
+
+// medios //////////////////////////////////////////////////////////////////
+
+.medios_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.medios_icons_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.medios_icon {
+  opacity: 0.1;
+  position: relative;
+  transform: scale(0.2);
+}
+
+.class {
+  color: #fff;
+  font-size: 1em;
+  margin: 1rem 0;
+  position: relative;
+  letter-spacing: 2px;
+}
+.class::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -15px;
+  height: 7px;
+  width: 30%;
+  left: 0;
+  background-color: yellow;
+}
+
+// footer
+
+.footer-ajust {
+  margin-top: 30px;
+}
+.footer-container {
+  min-height: 40vh;
+  background-color: #1f5436;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
+}
+.footer-info {
+  padding: 20px;
+}
+.footer-logo {
+  padding: 20px;
+  max-height: 150px;
+}
+.footer-container2 {
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.button2 {
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 0.6rem 2rem;
+  margin: 1rem;
+  border: solid 4px #dbab1e;
+  border-radius: 5px;
+  background-color: #dbab1e;
+  color: #fff;
+  min-width: 5em;
+  transition: 200ms ease-in-out;
+  &:hover {
+    border: solid 4px #dbab1e;
+    background-color: transparent;
+  }
+}
+.button1 {
+  padding: 0.8rem 2rem;
+  height: 7vh;
+  width: 8vh;
+  letter-spacing: 2px;
+  color: #fff;
+  border-radius: 3px;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #dbab1e;
+  background-color: transparent;
+  transition: 1s ease-in-out;
+  &:hover {
+    width: 20vh;
+  }
+}
