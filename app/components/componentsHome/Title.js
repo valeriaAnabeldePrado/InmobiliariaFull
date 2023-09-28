@@ -4,7 +4,7 @@ import "./styles.scss";
 const Title = ({ children }) => {
   return (
     <div className="class">
-      <h2>{children}</h2>
+      <h2 className="classTitle">{children}</h2>
     </div>
   );
 };

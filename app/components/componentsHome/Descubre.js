@@ -41,8 +41,6 @@ const Descubre = () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  console.log(refs);
-
   useEffect(() => {
     gsap.to(refs.current, {
       y: 0,
@@ -61,7 +59,7 @@ const Descubre = () => {
   return (
     <div className="descubre_container">
       <div className="descubre_div">
-        <Title>Descubre</Title>
+        <Title>DESCUBRE</Title>
         <div ref={container} className="descubre_icons_container">
           {array.map(({ p, Ico }, index) => {
             return (
@@ -73,14 +71,15 @@ const Descubre = () => {
                 className="descubre_icons"
               >
                 <h3>{p}</h3>
-                <Ico />
+                <Ico className="fontIco" />
               </div>
             );
           })}
         </div>
       </div>
-      <div className="descubre_div">
+      <div className="descubre_div margen">
         <Image
+          className="image"
           fill={true}
           src={descubre}
           alt="descubre"

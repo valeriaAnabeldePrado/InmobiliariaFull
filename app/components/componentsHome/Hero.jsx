@@ -28,7 +28,7 @@ const Hero = () => {
           de tus sueños!
         </h3>
         <Link href={"#"}>
-          <Button2 style={{ marginTop: "1rem" }}>CONECTATE</Button2>
+          <Button2 style={{ marginTop: "1rem" }}>Conectate</Button2>
         </Link>
       </div>
     </>

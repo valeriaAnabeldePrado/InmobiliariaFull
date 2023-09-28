@@ -1,6 +1,15 @@
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./app/components/componentsHome/styles.scss ***!
   \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.fondo {
+  background-color: #262626;
+}
+
 @keyframes appearAnimation {
   0% {
     transform: translateX(-20px);
@@ -56,7 +65,7 @@
 }
 
 .hero-text {
-  font-size: 1.4em;
+  font-size: clamp(1em, 3vw, 1.6em);
   font-weight: 300;
   color: #fff;
   width: 50vw;
@@ -69,12 +78,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2rem;
-  gap: 2rem;
+  margin: 7rem 2rem 7rem 2rem;
+  gap: 6%;
   flex-wrap: wrap;
-  min-height: 100vh;
+}
+.descubre_container .image {
+  object-fit: cover;
+}
+@media only screen and (max-width: 797px) {
+  .descubre_container {
+    margin: 5rem 2rem 5rem 2rem;
+  }
 }
 
+@media only screen and (max-width: 702px) {
+  .margen {
+    margin-top: 4rem;
+  }
+}
 .descubre_div {
   min-width: 300px;
   min-height: 380px;
@@ -85,7 +106,7 @@
 
 .descubre_icons {
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   position: relative;
   opacity: 0;
   transform: translate(-200px, 0);
@@ -103,8 +124,9 @@
   content: "";
   display: block;
   position: absolute;
-  height: 3px;
+  height: 5px;
   width: 0;
+  bottom: -15px;
   left: 0;
   background-color: #fff;
   transition: width 0.3s ease-in-out;
@@ -121,35 +143,73 @@
   justify-content: space-evenly;
 }
 
+.fontIco {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
 .about_container {
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2rem;
-  gap: 2rem;
-  flex-wrap: wrap;
+  height: 100vh;
+  margin: 7rem 0 7rem 0;
+  background-image: url(/_next/static/media/fondoIndex2.9e6358ed.webp);
+  background-size: cover;
+}
+@media only screen and (max-width: 797px) {
+  .about_container {
+    margin: 5rem 2rem 5rem 2rem;
+  }
 }
 
 .about_div {
-  min-width: 300px;
-  min-height: 380px;
-  min-height: 40vw;
-  position: relative;
-  width: 30vw;
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  text-align: center;
 }
 
 .about_div_info {
-  gap: 2rem;
   display: flex;
   flex-direction: column;
-  height: 80%;
-  justify-content: space-around;
+  height: 100%;
+  justify-content: flex-end;
+}
+.about_div_info .info {
+  margin: 2rem 0 1rem 0;
+  font-size: clamp(1em, 3vw, 1.6em);
 }
 
 .images {
   position: relative;
+}
+
+@keyframes appearAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.about_div {
+  animation: appearAnimation 1s ease forwards;
+}
+
+.about_div_info {
+  animation: appearAnimation 1s ease forwards 0.8s;
+  opacity: 0;
+}
+
+.info {
+  opacity: 0;
+  animation: appearAnimation 1s ease forwards 1s;
 }
 
 .tasas_container {
@@ -259,21 +319,23 @@
 
 .class {
   color: #fff;
-  font-size: 1em;
   margin: 1rem 0;
   position: relative;
   letter-spacing: 2px;
+}
+.class .classTitle {
+  font-size: clamp(2em, 5vw, 4em);
 }
 
 .class::after {
   content: "";
   display: block;
   position: absolute;
-  bottom: -15px;
-  height: 7px;
-  width: 30%;
+  bottom: -20px;
+  height: 10px;
+  width: 40%;
   left: 0;
-  background-color: yellow;
+  background-color: #dbab1e;
 }
 
 .footer-ajust {
@@ -312,7 +374,7 @@
 }
 
 .button2 {
-  font-weight: 600;
+  font-size: clamp(1em, 2.5vw, 1.5em);
   letter-spacing: 2px;
   padding: 0.6rem 2rem;
   margin: 1rem;
@@ -324,7 +386,7 @@
   transition: 200ms ease-in-out;
 }
 .button2:hover {
-  border: solid 4px #dbab1e;
+  border: solid 4.5px #dbab1e;
   background-color: transparent;
 }
 
