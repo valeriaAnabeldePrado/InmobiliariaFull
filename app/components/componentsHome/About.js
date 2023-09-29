@@ -1,15 +1,43 @@
 "use client";
-
+import { useState, useRef, useEffect } from "react";
 import Title from "./Title";
 import Button2 from "./Button2";
 
 const About = () => {
+  const elementoRef = useRef();
+  const [seIntersecto, setSeIntersecto] = useState(false);
+
+  useEffect(() => {
+    const elemento = elementoRef.current;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+          console.log("si esta :D");
+          setSeIntersecto(entry.isIntersecting);
+        }
+      });
+    });
+    if (elemento) {
+      observer.observe(elemento);
+    }
+  }, []);
+
   return (
     <div className="about_container">
-      <div className="about_div">
+      <div
+        className={seIntersecto ? "about_div_animation about_div" : "about_div"}
+        ref={elementoRef}
+      >
         <Title>NOSOTROS</Title>
-        <div className="about_div_info">
-          <div className="info">
+        <div
+          className={
+            seIntersecto
+              ? "about_div_info about_div_info_animation"
+              : "about_div_info"
+          }
+        >
+          <div className={seIntersecto ? "info info_animation" : "info"}>
             <p>
               Somos una empresa familiar que, manteniendo los valores de
               nuestros fundadores en el centro de nuestras operaciones, nos

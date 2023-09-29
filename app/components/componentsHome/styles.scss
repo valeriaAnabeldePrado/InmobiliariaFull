@@ -173,18 +173,18 @@
     transform: translateX(0);
   }
 }
-.about_div {
-  animation: appearAnimation 1s ease forwards;
+.about_div_animation {
+  animation: appearAnimation 1.2s ease forwards;
 }
 
-.about_div_info {
+.about_div_info_animation {
   animation: appearAnimation 1s ease forwards 0.8s;
   opacity: 0;
 }
 
-.info {
+.info_animation {
   opacity: 0;
-  animation: appearAnimation 1s ease forwards 1s;
+  animation: appearAnimation 1s ease forwards 0.9s;
 }
 
 // tasas //
