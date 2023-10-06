@@ -1,4 +1,3 @@
-import { ImageList, ImageListItem } from "@mui/material";
 import React from "react";
 import "./styles.scss";
 import gallery1 from "../../../public/Images/gallery1.webp";
@@ -19,13 +18,15 @@ const itemData = [
     cols: 2,
   },
   {
-    img: gallery2,
-    title: "Balcony",
+    img: gallery7,
+    title: "Backyard",
   },
   {
     img: gallery3,
     title: "Park",
   },
+];
+const imgdata2 = [
   {
     img: gallery4,
     title: "Livin",
@@ -42,33 +43,66 @@ const itemData = [
     rows: 2,
     cols: 2,
   },
+];
+const imgData3 = [
   {
-    img: gallery7,
-    title: "Backyard",
+    img: gallery2,
+    title: "Balcony",
   },
+
   {
     img: gallery8,
     title: "Build",
   },
 ];
-
 const ImagesGallery = () => {
   return (
     <>
-      <ImageList className="una" variant="quilted" cols={4} rowHeight={170}>
+      <div className="galeria">
         {itemData.map((item, i) => (
-          <ImageListItem key={i} cols={item.cols || 1} rows={item.rows || 2}>
+          <section className="imagenesCont" key={i}>
             <Image
               placeholder="blur"
               fill={true}
               src={item.img}
               alt={item.title}
               className="images"
+              style={{ width: "100%" }}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
-          </ImageListItem>
+          </section>
         ))}
-      </ImageList>
+      </div>
+      <div className="galeriaDos">
+        {imgData3.map((imagen, i) => (
+          <section key={i} className="imagesCont2">
+            <Image
+              placeholder="blur"
+              fill={true}
+              src={imagen.img}
+              alt={imagen.title}
+              className="images2"
+              style={{ width: "100%" }}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </section>
+        ))}
+      </div>
+      <div className="galeria">
+        {imgdata2.map((item, i) => (
+          <section className="imagenesCont" key={i}>
+            <Image
+              placeholder="blur"
+              fill={true}
+              src={item.img}
+              alt={item.title}
+              className="images"
+              style={{ width: "100%" }}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </section>
+        ))}
+      </div>
     </>
   );
 };

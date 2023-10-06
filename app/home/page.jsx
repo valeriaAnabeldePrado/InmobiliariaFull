@@ -4,11 +4,11 @@ import Descubre from "../components/componentsHome/Descubre";
 import "../globals.scss";
 import About from "../components/componentsHome/About";
 import ImagesGallery from "../components/componentsHome/ImagesGallery";
-// import Tasasiones from "../components/componentsHome/Tasasiones";
-// import Maps from "../components/componentsHome/Maps";
-// import Contactate from "../components/componentsHome/Contactate";
-// import MediosContact from "../components/componentsHome/MediosContact";
-// import { Footer } from "../components/componentsHome/Footer";
+import Tasasiones from "../components/componentsHome/Tasasiones";
+import Maps from "../components/componentsHome/Maps";
+import Contactate from "../components/componentsHome/Contactate";
+import MediosContact from "../components/componentsHome/MediosContact";
+import { Footer } from "../components/componentsHome/Footer";
 
 const HomeIndex = () => {
   return (
@@ -18,12 +18,15 @@ const HomeIndex = () => {
         <Descubre />
         <About />
         <ImagesGallery />
+        <Tasasiones />
+        <Maps />
+        <Contactate />
+        {/* <MediosContact /> */}
+        {/* <Footer /> */}
         {/* <Hero />
       <Descubre />
       <About />
       <ImagesGallery />
-      <Tasasiones />
-      <Maps />
       <Contactate />
       <MediosContact />
       <Footer /> */}

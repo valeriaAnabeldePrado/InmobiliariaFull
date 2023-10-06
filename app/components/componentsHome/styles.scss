@@ -38,6 +38,10 @@
   background: url("../../../__MACOSX/public/Images/imagenesHome/fondo.webp")
     no-repeat center top;
   background-size: cover;
+  @media only screen and (max-width: 700px) {
+    padding: 3rem 0 3rem 0;
+    height: auto;
+  }
 }
 .hero-logo {
   width: 800px;
@@ -138,8 +142,10 @@
   background-image: url("../../../public/Images/fondoIndex2.webp");
   background-size: cover;
 
-  @media only screen and (max-width: 797px) {
-    margin: 5rem 2rem 5rem 2rem;
+  @media only screen and (max-width: 700px) {
+    margin: 5rem 0 5rem 0;
+    padding: 3rem 0 3rem 0;
+    height: auto;
   }
 }
 
@@ -186,62 +192,104 @@
   opacity: 0;
   animation: appearAnimation 1s ease forwards 0.9s;
 }
-
+// GALERIA//
+.galeria {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  gap: 0;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  .imagenesCont {
+    overflow: hidden;
+    position: relative;
+    height: 25vw;
+    .images {
+      object-fit: cover;
+      transition: all 350ms ease;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+.galeriaDos {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  gap: 0;
+  -webkit-column-width: 50%;
+  -moz-column-width: 50%;
+  .imagesCont2 {
+    overflow: hidden;
+    transition: all 350ms ease;
+    position: relative;
+    height: 45vw;
+    .images2 {
+      object-fit: cover;
+      transition: all 350ms ease;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
 // tasas //
 
 .tasas_container {
-  color: #fff;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  @include containerCont;
 }
+
 .tasas_div {
-  width: 50%;
-  min-width: 300px;
-  position: relative;
-  padding: 2rem;
+  @include containerContII;
 }
 
 .tasas_ajust {
   display: flex;
   flex-direction: column;
+  align-self: flex-end;
   gap: 2rem;
+  padding: 1rem 3rem 0 3rem;
+  > p {
+    font-size: $fontTamnio2;
+  }
+  @media only screen and (max-width: 734px) {
+    gap: 1rem;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 3rem 4rem;
+  }
 }
 
 .tasas_logo {
-  background-color: #fff;
-  position: relative !important;
-  object-fit: cover;
+  @include logoP($colorAmarillo);
+}
+.alto {
+  height: 70vh !important;
 }
 .maps {
   margin-top: 40px;
+  @media only screen and (max-width: 600px) {
+    margin-top: 0;
+  }
+}
+.ajust {
+  padding: 2rem 3rem;
+  @media only screen and (max-width: 600px) {
+    padding: 0 0 3rem 3rem;
+  }
 }
 // contact
 
 .contact_container {
-  color: #fff;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  @include containerCont;
 }
 .contact_div {
-  width: 50%;
-  min-width: 300px;
-  position: relative;
-  padding: 2rem;
+  @include containerContII;
 }
 
 .contact_logo {
-  background-color: "green";
-  position: relative !important;
-  object-fit: cover;
-}
-.ajust {
-  padding: 2rem;
+  @include logoP($colorVerde);
 }
 
 .medios_icon {

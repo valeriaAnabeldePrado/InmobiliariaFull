@@ -23,7 +23,7 @@ const Contactate = () => {
             src={logo3}
             alt="logo3"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="contact_logo"
+            className="contact_logo alto"
           />
         </div>
       </div>

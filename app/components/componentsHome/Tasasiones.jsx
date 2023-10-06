@@ -3,6 +3,7 @@ import "./styles.scss";
 import Image from "next/image";
 import logo2 from "../../../public/Images/logo2.png";
 import Title from "./Title";
+import Button2 from "./Button2";
 
 const Tasasiones = () => {
   return (
@@ -13,7 +14,7 @@ const Tasasiones = () => {
           fill={true}
           src={logo2}
           alt="logo2"
-          className="tasas_logo"
+          className="tasas_logo alto"
         />
       </div>
       <div className="tasas_div tasas_ajust">
@@ -23,7 +24,9 @@ const Tasasiones = () => {
           confiables. Nuestro equipo de expertos garantiza un servicio de
           calidad y excelencia para conocer el valor real de su propiedad.
         </p>
-        <section className="contForm"></section>
+        <section>
+          <Button2>Contactanos</Button2>
+        </section>
       </div>
     </div>
   );

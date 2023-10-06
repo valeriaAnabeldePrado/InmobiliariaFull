@@ -47,6 +47,12 @@ body {
   background: url(/_next/static/media/fondo.f84b3179.webp) no-repeat center top;
   background-size: cover;
 }
+@media only screen and (max-width: 700px) {
+  .hero {
+    padding: 3rem 0 3rem 0;
+    height: auto;
+  }
+}
 
 .hero-logo {
   width: 800px;
@@ -65,7 +71,7 @@ body {
 }
 
 .hero-text {
-  font-size: clamp(1em, 3vw, 1.6em);
+  font-size: clamp(1em, 3vw, 1.4em);
   font-weight: 300;
   color: #fff;
   width: 50vw;
@@ -158,9 +164,11 @@ body {
   background-image: url(/_next/static/media/fondoIndex2.9e6358ed.webp);
   background-size: cover;
 }
-@media only screen and (max-width: 797px) {
+@media only screen and (max-width: 700px) {
   .about_container {
-    margin: 5rem 2rem 5rem 2rem;
+    margin: 5rem 0 5rem 0;
+    padding: 3rem 0 3rem 0;
+    height: auto;
   }
 }
 
@@ -181,7 +189,7 @@ body {
 }
 .about_div_info .info {
   margin: 2rem 0 1rem 0;
-  font-size: clamp(1em, 3vw, 1.6em);
+  font-size: clamp(1em, 3vw, 1.4em);
 }
 
 .images {
@@ -212,9 +220,48 @@ body {
   animation: appearAnimation 1s ease forwards 0.9s;
 }
 
+.galeria {
+  column-count: 3;
+  gap: 0;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+}
+.galeria .imagenesCont {
+  overflow: hidden;
+  position: relative;
+  height: 25vw;
+}
+.galeria .imagenesCont .images {
+  object-fit: cover;
+  transition: all 350ms ease;
+}
+.galeria .imagenesCont .images:hover {
+  transform: scale(1.2);
+}
+
+.galeriaDos {
+  column-count: 2;
+  gap: 0;
+  -webkit-column-width: 50%;
+  -moz-column-width: 50%;
+}
+.galeriaDos .imagesCont2 {
+  overflow: hidden;
+  transition: all 350ms ease;
+  position: relative;
+  height: 45vw;
+}
+.galeriaDos .imagesCont2 .images2 {
+  object-fit: cover;
+  transition: all 350ms ease;
+}
+.galeriaDos .imagesCont2 .images2:hover {
+  transform: scale(1.2);
+}
+
 .tasas_container {
   color: #fff;
-  min-height: 60vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -225,28 +272,66 @@ body {
   width: 50%;
   min-width: 300px;
   position: relative;
-  padding: 2rem;
+}
+@media only screen and (max-width: 600px) {
+  .tasas_div {
+    width: 100%;
+  }
 }
 
 .tasas_ajust {
   display: flex;
   flex-direction: column;
+  align-self: flex-end;
   gap: 2rem;
+  padding: 1rem 3rem 0 3rem;
+}
+.tasas_ajust > p {
+  font-size: clamp(1em, 3vw, 1.1em);
+}
+@media only screen and (max-width: 734px) {
+  .tasas_ajust {
+    gap: 1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .tasas_ajust {
+    padding: 3rem 4rem;
+  }
 }
 
 .tasas_logo {
-  background-color: #fff;
   position: relative !important;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: #dbab1e;
+  padding: 2rem;
+}
+
+.alto {
+  height: 70vh !important;
 }
 
 .maps {
   margin-top: 40px;
 }
+@media only screen and (max-width: 600px) {
+  .maps {
+    margin-top: 0;
+  }
+}
+
+.ajust {
+  padding: 2rem 3rem;
+}
+@media only screen and (max-width: 600px) {
+  .ajust {
+    padding: 0 0 3rem 3rem;
+  }
+}
 
 .contact_container {
   color: #fff;
-  min-height: 60vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -257,16 +342,17 @@ body {
   width: 50%;
   min-width: 300px;
   position: relative;
-  padding: 2rem;
+}
+@media only screen and (max-width: 600px) {
+  .contact_div {
+    width: 100%;
+  }
 }
 
 .contact_logo {
-  background-color: "green";
   position: relative !important;
-  object-fit: cover;
-}
-
-.ajust {
+  object-fit: contain;
+  background-color: #19573a;
   padding: 2rem;
 }
 
@@ -405,6 +491,140 @@ body {
 }
 .button1:hover {
   width: 20vh;
+}
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./app/components/menuNav/estiloMenu.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.fondo {
+  background-color: #262626;
+}
+
+.cont-main {
+  position: fixed;
+  z-index: 100000000000000000000000000000000000000;
+  width: 100%;
+}
+
+.cont-menu {
+  position: relative;
+  z-index: 100000000000000000000000000000000000000;
+  height: 0vh;
+  background-color: transparent;
+  opacity: 0;
+  top: -100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+}
+.cont-menu .list {
+  list-style-type: none;
+  width: 70%;
+}
+.cont-menu .list .list-cont {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0 2rem 0;
+}
+.cont-menu .list .list-cont li {
+  font-size: clamp(1em, 3vw, 1.4em);
+}
+.cont-menu .list .list-cont .icono {
+  transform: rotate(45deg);
+  font-size: clamp(1em, 3vw, 1.4em);
+  transition: 500ms ease;
+}
+.cont-menu .list .list-cont .icono:hover {
+  transform: rotate(90deg);
+}
+
+.activo {
+  top: 0vh;
+  opacity: 1;
+  height: 90vh;
+  background-color: #fff;
+}
+
+.nav {
+  background-color: #262626;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0.5rem 2rem;
+}
+
+.icon {
+  margin: 20px;
+}
+
+.nav-icon-5 {
+  width: 35px;
+  height: 30px;
+  margin: 10px 10px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.nav-icon-5 span {
+  background-color: #fff;
+  position: absolute;
+  border-radius: 2px;
+  transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  width: 100%;
+  height: 4px;
+  transition-duration: 500ms;
+}
+
+.nav-icon-5 span:nth-child(1) {
+  top: 0px;
+  left: 0px;
+}
+
+.nav-icon-5 span:nth-child(2) {
+  top: 13px;
+  left: 0px;
+  opacity: 1;
+}
+
+.nav-icon-5 span:nth-child(3) {
+  bottom: 0px;
+  left: 0px;
+}
+
+.nav-icon-5:not(.open):hover span:nth-child(1) {
+  transform: rotate(-3deg) scaleY(1.1);
+}
+
+.nav-icon-5:not(.open):hover span:nth-child(2) {
+  transform: rotate(3deg) scaleY(1.1);
+}
+
+.nav-icon-5:not(.open):hover span:nth-child(3) {
+  transform: rotate(-4deg) scaleY(1.1);
+}
+
+.nav-icon-5.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 13px;
+}
+
+.nav-icon-5.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-icon-5.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 13px;
 }
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[12].use[3]!./node_modules/bootstrap/dist/css/bootstrap.min.css ***!

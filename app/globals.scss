@@ -6,7 +6,9 @@ body {
 $colorNegro: #262626;
 $colorAmarillo: #dbab1e;
 $colorBlanco: #fff;
-$fontTamnio: clamp(1em, 3vw, 1.6em);
+$colorVerde: #19573a;
+$fontTamnio: clamp(1em, 3vw, 1.4em);
+$fontTamnio2: clamp(1em, 3vw, 1.1em);
 $fontTamnioBoton: clamp(1em, 2.5vw, 1.5em);
 
 .fondo {
@@ -121,4 +123,26 @@ $fontTamnioBoton: clamp(1em, 2.5vw, 1.5em);
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@mixin containerCont {
+  color: #fff;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@mixin containerContII {
+  width: 50%;
+  min-width: 300px;
+  position: relative;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+}
+@mixin logoP($color) {
+  position: relative !important;
+  object-fit: contain;
+  background-color: $color;
+  padding: 2rem;
 }
