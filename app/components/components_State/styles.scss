@@ -3,6 +3,9 @@
 //---------------HERO-----------------//
 .heroPages {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   background-color: aqua;
   .videoB {
@@ -20,8 +23,12 @@
     background-color: #262626;
     opacity: 0.7;
   }
+  .info-state {
+    font-size: $fontTamnio;
+  }
   .items {
-    padding-top: 28vh;
+    padding: 10% 15% 10% 15%;
+    text-align: center;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -30,6 +37,10 @@
     margin: auto;
     position: relative;
     z-index: 2;
+    gap: 3rem;
+    @media only screen and (max-width: 555px) {
+      padding: 0 3rem 0 3rem;
+    }
   }
   .h1Sale {
     font-size: 5vw;
@@ -39,9 +50,6 @@
 @media only screen and (max-width: 1199px) {
   .heroPages {
     min-height: 75vh;
-  }
-  .items {
-    padding-top: 18vh;
   }
 }
 
@@ -54,15 +62,8 @@
     text-align: center;
     margin: 0 1rem 0 1rem;
   }
-  .items {
-    padding-top: 12vh;
-  }
 }
-@media only screen and (max-width: 400px) {
-  .items {
-    padding-top: 8vh;
-  }
-}
+
 //--------------------MAINSTATE---------------------//
 .containerState {
   background-color: $colorNegro;
@@ -99,12 +100,15 @@
   align-self: flex-start;
   text-align: start;
   font-size: 1em;
-  @media only screen and (max-width: 400px) {
-    padding: 0.5rem 0 0.5rem;
+  @media only screen and (max-width: 606px) {
+    padding: 1rem 0.5rem !important;
   }
 }
 .boton {
   @include boton(5rem);
+  @media only screen and (max-width: 606px) {
+    width: 100% !important;
+  }
 }
 .boton2 {
   @include boton(5rem);
@@ -119,15 +123,15 @@
 .sectionBotones {
   display: flex;
   gap: 20px 30%;
+  @media only screen and (max-width: 710px) {
+    padding-top: 1.8rem;
+    flex-direction: column;
+  }
 }
 .containerIII {
   @include containerIII;
 }
-@media only screen and (max-width: 710px) {
-  .sectionBotones {
-    flex-direction: column;
-  }
-}
+
 //---------------CONTAINER CARD----------------//
 .containerCard {
   @include containerIII;
@@ -177,6 +181,9 @@
     .pp {
       margin: 0 0 0 1rem;
     }
+    @media only screen and (max-width: 833px) {
+      padding-right: 1rem;
+    }
   }
 }
 .cardBoxContainer {
@@ -207,7 +214,6 @@
   flex-direction: column;
   .modal-tilte {
     @include titilosII(44%, clamp(1em, 1.5em, 3vw));
-    
   }
   .modal-tilteII {
     @include titilosII(15%, clamp(1em, 1.5em, 3vw));

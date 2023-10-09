@@ -1,17 +1,8 @@
 import { FilterProvider } from "./components/contextFiltersData";
+import Menu from "./components/menuNav/Menu";
 import "./globals.scss";
 import { Inter } from "next/font/google";
-import Link from "next/link";
-const rutas = [
-  {
-    nombre: "Home",
-    deruta: "/",
-  },
-  {
-    nombre: "InmueblesVenta",
-    deruta: "/inmuebles",
-  },
-];
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -22,18 +13,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <head>
-        <title>Titulo de la app</title>
-      </head>
-      <body className={inter.className}>
-        <header>
-          <nav>
-            <ul>
-              <Link href={rutas[0].deruta}>Home</Link>
-              <Link href={rutas[1].deruta}>Inmuebles</Link>
-            </ul>
-          </nav>
-        </header>
+      <body className="cuerpo-main">
+        <Menu />
         {children}
       </body>
     </html>

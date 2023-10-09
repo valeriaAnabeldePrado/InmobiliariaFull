@@ -5,6 +5,7 @@ import "./styles.scss";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Title from "./Title";
+import Link from "next/link";
 
 const MediosContact = () => {
   const refs = useRef([]);
@@ -21,7 +22,6 @@ const MediosContact = () => {
       scrollTrigger: {
         trigger: container.current,
         scrub: true,
-        markers: true,
         start: "center bottom",
         end: "center center",
       },
@@ -39,8 +39,21 @@ const MediosContact = () => {
               className="medios_icon"
               key={`$here_${index}`}
             >
-              <Ico href={href} />
-              <h6>{h6}</h6>
+              {href ? (
+                <Link
+                  href={href}
+                  passHref
+                  style={{ textDecoration: "none", color: "#fff" }}
+                >
+                  <Ico />
+                  <h6 style={{ padding: "1rem" }}>{h6}</h6>
+                </Link>
+              ) : (
+                <>
+                  <Ico />
+                  <h6>{h6}</h6>
+                </>
+              )}
             </div>
           );
         })}

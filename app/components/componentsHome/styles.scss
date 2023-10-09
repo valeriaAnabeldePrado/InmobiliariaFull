@@ -2,6 +2,7 @@
 // Estilos de Hero ----------------------------------------------------------------
 @keyframes appearAnimation {
   0% {
+   
     transform: translateX(-20px);
   }
   100% {
@@ -141,6 +142,7 @@
   margin: 7rem 0 7rem 0;
   background-image: url("../../../public/Images/fondoIndex2.webp");
   background-size: cover;
+  background-attachment: fixed;
 
   @media only screen and (max-width: 700px) {
     margin: 5rem 0 5rem 0;
@@ -287,9 +289,11 @@
 .contact_div {
   @include containerContII;
 }
-
-.contact_logo {
-  @include logoP($colorVerde);
+.paddingg {
+  padding: 5rem 4rem 1rem 0;
+  @media only screen and (max-width: 600px) {
+    padding: 0 3rem;
+  }
 }
 
 .medios_icon {
@@ -324,6 +328,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 5rem 3rem;
+  gap: 3rem;
 }
 .medios_icons_container {
   display: flex;
@@ -366,25 +372,31 @@
   margin-top: 30px;
 }
 .footer-container {
-  min-height: 40vh;
   background-color: #1f5436;
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   color: #fff;
-  flex-wrap: wrap;
-  padding: 2rem 1rem;
+  padding: 1rem;
+  gap: 4rem;
 }
 .footer-info {
   padding: 20px;
+  @media only screen and (max-width: 624px) {
+    width: 100%;
+    text-align: center;
+  }
 }
 .footer-logo {
-  padding: 20px;
-  max-height: 150px;
+  height: 50vh;
+  object-fit: contain;
+  width: 30vw;
+  margin-top: 3rem;
+  @media only screen and (max-width: 624px) {
+    height: 30vh;
+    margin-top: 1rem;
+  }
 }
 .footer-container2 {
   justify-content: space-around;
@@ -392,7 +404,14 @@
   flex-wrap: wrap;
   display: flex;
 }
-
+.marca {
+  text-align: center;
+}
+.titulof {
+  font-size: clamp(1em, 3.5vw, 3em);
+  padding: 2rem 0;
+  color: #dbab1e;
+}
 .button2 {
   font-size: $fontTamnioBoton;
   letter-spacing: 2px;

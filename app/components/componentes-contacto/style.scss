@@ -1,0 +1,37 @@
+.contact-maxCont {
+  height: 200vh;
+  background: url(../../../public/Images/fondo2.webp) center;
+  background-size: cover;
+  padding-bottom: 40px;
+}
+
+.section-info {
+  font-family: "Avenir", sans-serif;
+  padding: 10% 15% 2% 15%;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  @media only screen and (max-width: 555px) {
+    padding: 0 3rem 0 3rem;
+    gap: 1rem;
+  }
+  .title {
+    font-size: 5vw;
+    letter-spacing: 8px;
+    margin: 1rem 0;
+  }
+  .p-state {
+    font-size: clamp(1em, 3vw, 1.4em);
+  }
+}
+.container-btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}

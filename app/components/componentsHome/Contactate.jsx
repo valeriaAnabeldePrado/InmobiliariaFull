@@ -2,6 +2,7 @@ import React from "react";
 import logo3 from "../../../public/Images/logo3.png";
 import Image from "next/image";
 import Title from "./Title";
+import { Formulario } from "../components_State/Form";
 
 const Contactate = () => {
   return (
@@ -12,19 +13,15 @@ const Contactate = () => {
           <p>
             Estamos comprometidos en brindarte un servicio personalizado y
             eficiente. Completa el formulario y un asesor se comunicará contigo.
-            Resuelve tus dudas y conoce nuestros servicios e inmuebles
-            disponibles.
           </p>
           <section className="contForm"></section>
         </div>
-        <div className="contact_div">
-          <Image
-            fill={true}
-            src={logo3}
-            alt="logo3"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="contact_logo alto"
-          />
+        <div className="contact_div paddingg">
+          <p>
+            Resuelve tus dudas y conoce nuestros servicios e inmuebles
+            disponibles.
+          </p>
+          <Formulario />
         </div>
       </div>
     </>

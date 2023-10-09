@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../../public/Images/logo.png";
+import logo from "../../../public/Images/logo3.png";
 import Image from "next/image";
 
 const Footer = () => {
@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="footer-container">
       <section className="footer-container2">
         <div className="footer-info">
-          <h5>Portugal inmobiliaria.</h5>
+          <h5 className="titulof">Portugal inmobiliaria.</h5>
           <p>Administración de propiedades</p>
           <p>Asesoramiento Jurídico - Contable - Inmobiliario </p>
           <p>Ventas - Alquileres - Tasaciones</p>
@@ -20,8 +20,8 @@ const Footer = () => {
           <Image src={logo} alt="logo" className="footer-logo" />
         </div>
       </section>
-      <p className="footer-info">
-        © Built with pride and caffeine by Anabel de Prado y Mauro Lobo. All
+      <p className="marca">
+        © Built with pride and caffeine by Anabel de Prado & Mauro Lobo. All
         rights reserved.
       </p>
     </div>

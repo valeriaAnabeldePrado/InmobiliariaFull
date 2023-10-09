@@ -1,4 +1,5 @@
 import React from "react";
+
 import Hero from "../components/componentsHome/Hero";
 import Descubre from "../components/componentsHome/Descubre";
 import "../globals.scss";
@@ -7,8 +8,7 @@ import ImagesGallery from "../components/componentsHome/ImagesGallery";
 import Tasasiones from "../components/componentsHome/Tasasiones";
 import Maps from "../components/componentsHome/Maps";
 import Contactate from "../components/componentsHome/Contactate";
-import MediosContact from "../components/componentsHome/MediosContact";
-import { Footer } from "../components/componentsHome/Footer";
+import ContyFooter from "../components/componentsHome/ContyFooter";
 
 const HomeIndex = () => {
   return (
@@ -21,16 +21,7 @@ const HomeIndex = () => {
         <Tasasiones />
         <Maps />
         <Contactate />
-        {/* <MediosContact /> */}
-        {/* <Footer /> */}
-        {/* <Hero />
-      <Descubre />
-      <About />
-      <ImagesGallery />
-      <Contactate />
-      <MediosContact />
-      <Footer /> */}
-        holis!!!
+        <ContyFooter />
       </main>
     </>
   );

@@ -3,6 +3,8 @@ body {
   padding: 0;
 }
 //--------------------VARIABLES-------------------//
+$fontFamili: "Avenir", sans-serif;
+
 $colorNegro: #262626;
 $colorAmarillo: #dbab1e;
 $colorBlanco: #fff;
@@ -13,6 +15,10 @@ $fontTamnioBoton: clamp(1em, 2.5vw, 1.5em);
 
 .fondo {
   background-color: $colorNegro;
+}
+.cuerpo-main {
+  position: relative;
+  width: 100%;
 }
 //--------------------MIXIN----------------------//
 @mixin containerII {
