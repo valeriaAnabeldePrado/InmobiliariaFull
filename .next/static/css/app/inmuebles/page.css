@@ -41,7 +41,7 @@ body {
 .heroPages .info-state {
   font-size: clamp(1em, 3vw, 1.4em);
 }
-.heroPages .items {
+.heroPages .cuerpo-items-state {
   padding: 10% 15% 10% 15%;
   text-align: center;
   color: #fff;
@@ -55,7 +55,7 @@ body {
   gap: 3rem;
 }
 @media only screen and (max-width: 555px) {
-  .heroPages .items {
+  .heroPages .cuerpo-items-state {
     padding: 0 3rem 0 3rem;
   }
 }

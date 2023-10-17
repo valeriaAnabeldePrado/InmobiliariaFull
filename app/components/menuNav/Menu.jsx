@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-
 import { FaArrowRight } from "react-icons/fa";
 import { useState } from "react";
 import "./estiloMenu.scss";
@@ -10,14 +9,17 @@ const rutas = [
   {
     nombre: "Home",
     deruta: "/",
+    id: 1,
   },
   {
-    nombre: "InmueblesVenta",
+    nombre: "Inmuebles en venta",
     deruta: "/inmuebles",
+    id: 2,
   },
   {
     nombre: "Contacto",
     deruta: "/contactate",
+    id: 3,
   },
 ];
 
@@ -42,7 +44,9 @@ const Menu = () => {
             }}
           ></div>
           <section className="menu-fondo">
-            <div class={activo ? "open icon nav-icon-5" : "icon nav-icon-5"}>
+            <div
+              className={activo ? "open icon nav-icon-5" : "icon nav-icon-5"}
+            >
               <span></span>
               <span></span>
               <span></span>
@@ -52,16 +56,16 @@ const Menu = () => {
 
         <nav className={!activo ? " cont-menu " : "cont-menu activo"}>
           <ul className="list">
-            {rutas.map(({ id, nombre, deruta }) => (
-              <>
+            {rutas.map((ruta) => (
+              <div key={Math.random()}>
                 <div className="list-cont">
                   <li onClick={handleCambio}>
-                    <Link href={deruta}>{nombre}</Link>
+                    <Link href={ruta.deruta}>{ruta.nombre}</Link>
                   </li>
                   <FaArrowRight className="icono" />
                 </div>
                 <hr />
-              </>
+              </div>
             ))}
           </ul>
         </nav>

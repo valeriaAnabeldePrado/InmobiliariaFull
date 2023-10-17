@@ -1,4 +1,6 @@
 import React from "react";
+import "../components/componentsHome/styles.scss";
+import FormVenta from "../components/componentes-contacto/Form-formVenta";
 import "../components/componentes-contacto/style.scss";
 const contactate = () => {
   return (
@@ -18,6 +20,9 @@ const contactate = () => {
           <button className="button2">Vender</button>
           <button className="button2">Tasar</button>
         </div>
+        <section className="contenedor-formularios">
+          <FormVenta />
+        </section>
       </main>
     </>
   );

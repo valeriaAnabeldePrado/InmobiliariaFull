@@ -4,7 +4,7 @@ import "./styles.scss";
 const HeroStateSale = () => {
   return (
     <div className="heroPages">
-      <section className="items">
+      <section className="cuerpo-items-state">
         <h1 className="h1Sale">PROPIEDADES EN VENTA</h1>
         <div className="p-stateCont">
           <p className="info-state">

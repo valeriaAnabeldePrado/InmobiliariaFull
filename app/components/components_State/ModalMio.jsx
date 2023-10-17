@@ -1,5 +1,4 @@
 import React from "react";
-import Modal from "react-bootstrap/Modal";
 //-------------------------Iconos
 import { FaBed } from "react-icons/fa";
 import { FaBath } from "react-icons/fa";
@@ -8,6 +7,7 @@ import "./styles.scss";
 import { MyySwiper } from "./MyySwiper";
 import { Formulario } from "./Form";
 import { Contacto } from "./Contactos";
+import Modal from "react-bootstrap/Modal";
 //------------------------Swiper
 
 //------------------------Modal y Form
