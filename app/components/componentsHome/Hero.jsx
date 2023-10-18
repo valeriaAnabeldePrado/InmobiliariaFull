@@ -27,7 +27,7 @@ const Hero = () => {
           inversores exigentes. ¡Confía en nosotros para encontrar la propiedad
           de tus sueños!
         </h3>
-        <Link href={"#"}>
+        <Link href={"/contactate"}>
           <Button2 style={{ marginTop: "1rem" }}>Conectate</Button2>
         </Link>
       </div>

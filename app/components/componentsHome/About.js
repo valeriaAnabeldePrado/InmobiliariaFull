@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import Title from "./Title";
 import Button2 from "./Button2";
-
+import Link from "next/link";
 const About = () => {
   const elementoRef = useRef();
   const [seIntersecto, setSeIntersecto] = useState(false);
@@ -53,7 +53,9 @@ const About = () => {
             <p>No dudes en ponerte en contacto.</p>
           </div>
         </div>
-        <Button2>Averigua</Button2>
+        <Link href={"/contactate"}>
+          <Button2>Averigua</Button2>
+        </Link>
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import Image from "next/image";
 import logo2 from "../../../public/Images/logo2.png";
 import Title from "./Title";
 import Button2 from "./Button2";
+import Link from "next/link";
 
 const Tasasiones = () => {
   return (
@@ -25,7 +26,9 @@ const Tasasiones = () => {
           calidad y excelencia para conocer el valor real de su propiedad.
         </p>
         <section>
-          <Button2>Contactanos</Button2>
+          <Link href={"/contactate"}>
+            <Button2>Contactanos</Button2>
+          </Link>
         </section>
       </div>
     </div>

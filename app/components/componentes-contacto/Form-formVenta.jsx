@@ -62,7 +62,7 @@ const FormVenta = () => {
     <>
       <section className="form-container">
         <form className="form-body" method="POST" onSubmit={handleSubmit}>
-          <div style={{ width: "100%" }}>
+          <div className="form-bC">
             <input
               type="text"
               name="tipoOperacion"
@@ -72,13 +72,7 @@ const FormVenta = () => {
               style={{ display: "none" }}
             />
             <h4 className=" texto-titulo">Quiero Vender</h4>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+            <div>
               <input
                 className="inputs"
                 type="text"
@@ -93,13 +87,7 @@ const FormVenta = () => {
                 <p className="errorOk">{error.tipoInmueble}</p>
               )}
             </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+            <div>
               <input
                 className="inputs"
                 type="text"
@@ -112,13 +100,7 @@ const FormVenta = () => {
               />
               {error.ubicacion && <p className="errorOk">{error.ubicacion}</p>}
             </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+            <div>
               <input
                 className="inputs"
                 type="text"
@@ -133,13 +115,7 @@ const FormVenta = () => {
                 <p className="errorOk">{error.superficie}</p>
               )}
             </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+            <div>
               <input
                 className="inputs"
                 type="text"
@@ -154,13 +130,7 @@ const FormVenta = () => {
                 <p className="errorOk">{error.antiguedad}</p>
               )}
             </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+            <div>
               <input
                 className="inputs"
                 type="text"
@@ -173,13 +143,7 @@ const FormVenta = () => {
               />
               {error.nombre && <p className="errorOk">{error.nombre}</p>}
             </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+            <div>
               <input
                 className="inputs"
                 type="tel"
@@ -194,13 +158,7 @@ const FormVenta = () => {
                 <p className="errorOk">{error.phoneNumber}</p>
               )}
             </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+            <div>
               <input
                 className="inputs"
                 type="email"
@@ -213,13 +171,7 @@ const FormVenta = () => {
               />
               {error.email && <p className="errorOk">{error.email}</p>}
             </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+            <div>
               <textarea
                 className="inputs"
                 rows={4}
@@ -232,7 +184,7 @@ const FormVenta = () => {
               />
               {error.comments && <p className="errorOk">{error.comments}</p>}
             </div>
-            <button className="boton2" type="submit">
+            <button className="buttonMio" type="submit">
               Enviar
             </button>
           </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { FilterProvider } from "../components/contextFiltersData";
 import "../components/components_State/styles.scss";
 import HeroStateSale from "../components/components_State/HeroStateSale";

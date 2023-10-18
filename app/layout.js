@@ -1,6 +1,4 @@
-import { FilterProvider } from "./components/contextFiltersData";
 import Menu from "./components/menuNav/Menu";
-import "./globals.scss";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
