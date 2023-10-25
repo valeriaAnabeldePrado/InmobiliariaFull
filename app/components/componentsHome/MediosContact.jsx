@@ -11,7 +11,6 @@ const MediosContact = () => {
   const refs = useRef([]);
   const container = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
-  console.log(refs);
 
   useEffect(() => {
     gsap.to(refs.current, {

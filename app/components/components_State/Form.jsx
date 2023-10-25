@@ -6,14 +6,14 @@ import { useForm } from "./useForm";
 import { AlertMnsj } from "./AlertaMnsj";
 import { BtnWhats } from "./BtnWts";
 
-const initialForm = {
-  nombre: "",
-  email: "",
-  phoneNumber: "",
-  comments: "",
-};
-
-const Formulario = () => {
+const Formulario = ({ direccion }) => {
+  const initialForm = {
+    ConsultaInmueble: `Inmueble a consultar: ${direccion}`,
+    nombre: "",
+    email: "",
+    phoneNumber: "",
+    comments: "",
+  };
   const validationsForm = (form) => {
     let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
     let regexPhoneNumber = /^[0-9]{10,16}$/;
@@ -45,6 +45,14 @@ const Formulario = () => {
     <>
       <form method="POST" onSubmit={handleSubmit} className="formOk">
         <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Control
+            type="text"
+            name="ConsultaInmueble"
+            onBlur={handleBlur}
+            onChange={handleChange}
+            value={form.ConsultaInmueble}
+            style={{ display: "none" }}
+          />
           <Form.Control
             type="text"
             name="nombre"

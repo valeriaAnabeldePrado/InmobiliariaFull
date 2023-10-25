@@ -38,6 +38,7 @@
   background: url("../../../__MACOSX/public/Images/imagenesHome/fondo.webp")
     no-repeat center top;
   background-size: cover;
+  background-attachment: fixed;
   @media only screen and (max-width: 700px) {
     padding: 3rem 0 3rem 0;
     height: auto;

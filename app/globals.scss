@@ -1,7 +1,9 @@
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: none;
 }
+
 //--------------------VARIABLES-------------------//
 $fontFamili: "Avenir", sans-serif;
 
@@ -12,7 +14,6 @@ $colorVerde: #19573a;
 $fontTamnio: clamp(1em, 3vw, 1.4em);
 $fontTamnio2: clamp(1em, 3vw, 1.1em);
 $fontTamnioBoton: clamp(1em, 2.5vw, 1.5em);
-
 .fondo {
   background-color: $colorNegro;
 }
@@ -20,6 +21,7 @@ $fontTamnioBoton: clamp(1em, 2.5vw, 1.5em);
   position: relative;
   width: 100%;
 }
+
 //--------------------MIXIN----------------------//
 @mixin containerII {
   background-color: $colorNegro;

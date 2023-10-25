@@ -6,7 +6,7 @@ import { useForm } from "../components_State/useForm";
 import "./style.scss";
 
 const initialForm = {
-  tipoOperacion: "Venta",
+  tipoOperacion: "Tasación de inmueble",
   tipoInmueble: "",
   ubicacion: "",
   superficie: "",

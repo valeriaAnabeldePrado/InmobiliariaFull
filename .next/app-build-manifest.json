@@ -1,5 +1,11 @@
 {
   "pages": {
+    "/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/loading.css",
+      "static/chunks/app/loading.js"
+    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -12,17 +18,17 @@
       "static/css/app/page.css",
       "static/chunks/app/page.js"
     ],
-    "/inmuebles/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/inmuebles/page.css",
-      "static/chunks/app/inmuebles/page.js"
-    ],
     "/contactate/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/contactate/page.css",
       "static/chunks/app/contactate/page.js"
+    ],
+    "/inmuebles/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/inmuebles/page.css",
+      "static/chunks/app/inmuebles/page.js"
     ]
   }
 }

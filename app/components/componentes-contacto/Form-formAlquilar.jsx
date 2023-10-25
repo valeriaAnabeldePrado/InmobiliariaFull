@@ -68,7 +68,7 @@ const FormAlquilar = () => {
               <input
                 className="inputs"
                 type="text"
-                name="tipoInmueble"
+                name="tipo"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 placeholder="Tipo de propiedad"
@@ -81,7 +81,7 @@ const FormAlquilar = () => {
               <input
                 className="inputs"
                 type="text"
-                name="ubicacion"
+                name="zona"
                 placeholder="Ubicación"
                 onBlur={handleBlur}
                 onChange={handleChange}
@@ -91,20 +91,18 @@ const FormAlquilar = () => {
               {error.zona && <p className="errorOk">{error.zona}</p>}
             </div>
 
-            <div>
-              <input
-                className="inputs"
-                type="text"
-                name="nombre"
-                onBlur={handleBlur}
-                onChange={handleChange}
-                value={form.nombre}
-                placeholder="Apellido y Nombre"
-                required
-              />
-              {error.nombre && <p className="errorOk">{error.nombre}</p>}
-              {/* LISTO NOMBRE */}
-            </div>
+            <input
+              className="inputs"
+              type="text"
+              name="nombre"
+              onBlur={handleBlur}
+              onChange={handleChange}
+              value={form.nombre}
+              placeholder="Apellido y Nombre"
+              required
+            />
+            {error.nombre && <p className="errorOk">{error.nombre}</p>}
+            {/* LISTO NOMBRE */}
 
             <div>
               <input

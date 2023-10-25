@@ -8,7 +8,7 @@ import { FiltersContextData } from "../contextFiltersData";
 const Filtros = () => {
   const [tipo, setTipo] = useState("");
   const [local, setLocal] = useState("");
-  const [rooms, setRooms] = useState(0);
+  const [rooms, setRooms] = useState("");
   const [search, setSearch] = useState(true);
   const [limiteFiltro, setLimiteFiltro] = useState(70);
   const [filtroInmueble, setFiltroInmueble] = useState([]);
@@ -37,7 +37,6 @@ const Filtros = () => {
     fetchData();
   }, [limiteFiltro]);
 
-  console.log(filtroInmueble);
   //-----FUNCIONES FILTRO-----//
   const handleSelectTipo = (e) => {
     setTipo(e.target.value);
@@ -58,9 +57,9 @@ const Filtros = () => {
     setSearch(true);
 
     const resultadosFiltrados = parametrofiltroInmueble
-      .filter((el) => el.type.name.toLowerCase().includes(tipo))
       .filter((el) => el.location.name.toLowerCase().includes(local))
-      .filter((el) => rooms === 0 || el.suite_amount === rooms);
+      .filter((el) => el.type.name.toLowerCase().includes(tipo))
+      .filter((el) => el.suite_amount.toString().includes(rooms));
 
     setActivo(true);
     setFiltro(resultadosFiltrados);
@@ -96,6 +95,9 @@ const Filtros = () => {
         <option value="nueva cordoba">Nueva Córdoba</option>
         <option value="centro">Centro</option>
         <option value="alto alberdi">Alto Alberdi</option>
+        <option value="camino a san carlos">Camino a San Carlos</option>
+        <option value="despeñaderos">Despeñaderos</option>
+        <option value="general paz">General Paz</option>
       </select>
       <span className="spanText">Selecciona la cantidad de habitaciones</span>
       <select
@@ -105,19 +107,16 @@ const Filtros = () => {
         onChange={handleSelectRooms}
         value={rooms}
       >
-        <option value={0}>Seleccionar</option>
+        <option>Seleccionar</option>
 
-        <option value={1}>Una</option>
-        <option value={2}>Dos</option>
-        <option value={3}>Tres</option>
-        <option value={4}>Una</option>
+        <option value="1">Una</option>
+        <option value="2">Dos</option>
+        <option value="3">Tres</option>
+        <option value="4">Cuatro</option>
+        <option value="5">Cinco</option>
       </select>
       <section className="sectionBotones">
-        <button
-          disabled={tipo == "" ? true : false}
-          onClick={() => handleSearch(filtroInmueble)}
-          className="boton"
-        >
+        <button onClick={() => handleSearch(filtroInmueble)} className="boton">
           BUSCAR
         </button>
 

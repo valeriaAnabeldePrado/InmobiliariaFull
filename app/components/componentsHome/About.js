@@ -11,9 +11,7 @@ const About = () => {
     const elemento = elementoRef.current;
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(entry);
         if (entry.isIntersecting) {
-          console.log("si esta :D");
           setSeIntersecto(entry.isIntersecting);
         }
       });

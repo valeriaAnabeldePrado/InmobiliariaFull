@@ -29,6 +29,7 @@ export function useForm(initialForm, validateForm) {
 
       setTimeout(() => setResponse(false), 10000);
       //POSTEAR LOS DATOS AL MAIL
+      console.log(form);
     } else {
       return;
     }

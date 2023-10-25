@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
-import { useState } from "react";
+import Lenis from "@studio-freight/lenis";
+import "../lenisStyles.scss";
+import { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../components/componentsHome/styles.scss";
 import FormVenta from "../components/componentes-contacto/Form-formVenta";
@@ -11,6 +13,24 @@ import FormTasar from "../components/componentes-contacto/Form-formTasar";
 import MediosContact from "../components/componentsHome/MediosContact";
 import { Footer } from "../components/componentsHome/Footer";
 const contactate = () => {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.5,
+      gestureOrientation: "vertical",
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
   const [tipe, setTipe] = useState("Vender");
 
   let tipoForm;

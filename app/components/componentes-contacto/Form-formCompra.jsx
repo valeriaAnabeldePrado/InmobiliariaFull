@@ -69,7 +69,7 @@ const FormCompra = () => {
               <input
                 className="inputs"
                 type="text"
-                name="tipoInmueble"
+                name="tipo"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 placeholder="Tipo de propiedad"
@@ -82,7 +82,7 @@ const FormCompra = () => {
               <input
                 className="inputs"
                 type="text"
-                name="ubicacion"
+                name="zona"
                 placeholder="Ubicación"
                 onBlur={handleBlur}
                 onChange={handleChange}

@@ -285,7 +285,7 @@ const ModalMio = ({ setModalShow, datosCard, setDatosCard, modalShow }) => {
               Si desea mas informacion sobre esta propiedad, porfavor, rellene
               el siguiente formulario.
             </p>
-            <Formulario />
+            <Formulario direccion={real_address} />
             <Contacto />
             <div
               style={{

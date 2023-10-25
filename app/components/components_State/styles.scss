@@ -1,51 +1,48 @@
 @import "../../globals.scss";
 
 //---------------HERO-----------------//
+.heroPages::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../../../public/Images/gallery9.webp") fixed no-repeat;
+  background-size: cover;
+  filter: brightness(0.5);
+  z-index: -1;
+}
 .heroPages {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: aqua;
-  .videoB {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-  .capa {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #262626;
-    opacity: 0.7;
-  }
+
   .info-state {
     font-size: $fontTamnio;
   }
-  .cuerpo-items-state {
-    padding: 10% 15% 10% 15%;
-    text-align: center;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    position: relative;
-    z-index: 2;
-    gap: 3rem;
-    @media only screen and (max-width: 555px) {
-      padding: 0 3rem 0 3rem;
-    }
+}
+.cuerpo-items-state {
+  padding: 10% 15% 10% 15%;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+  gap: 3rem;
+  @media only screen and (max-width: 555px) {
+    padding: 0 3rem 0 3rem;
   }
-  .h1Sale {
-    font-size: 5vw;
-    letter-spacing: 8px;
-  }
+}
+.h1Sale {
+  font-size: 5vw;
+  letter-spacing: 8px;
 }
 @media only screen and (max-width: 1199px) {
   .heroPages {
