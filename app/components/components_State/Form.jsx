@@ -5,6 +5,8 @@ import "./styles.scss";
 import { useForm } from "./useForm";
 import { AlertMnsj } from "./AlertaMnsj";
 import { BtnWhats } from "./BtnWts";
+import Button2 from "../componentsHome/Button2";
+import { SiWhatsapp } from "react-icons/si";
 
 const Formulario = ({ direccion }) => {
   const initialForm = {
@@ -114,10 +116,15 @@ const Formulario = ({ direccion }) => {
           </Form.Text>
         </Form.Group>
 
-        <button className="boton2" type="submit">
-          ENVIAR
+        <button className="button2 button-color-green" type="submit">
+          Enviar
         </button>
-        <BtnWhats />
+        <button
+          className="button2 button-color-green"
+          href={"https://api.whatsapp.com/send?phone=numerin"}
+        >
+          <SiWhatsapp />
+        </button>
       </form>
       {response && <AlertMnsj />}
     </>

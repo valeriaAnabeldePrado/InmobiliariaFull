@@ -35,7 +35,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="fondo ">
+    <main className="fondo">
       <Hero />
       <Descubre />
       <About />

@@ -56,16 +56,16 @@ const contactate = () => {
           </p>
         </section>
         <div className="container-btn">
-          <button className="buttonMio" onClick={() => setTipe("Comprar")}>
+          <button className="button2 " onClick={() => setTipe("Comprar")}>
             Comprar
           </button>
-          <button className="buttonMio" onClick={() => setTipe("Alquilar")}>
+          <button className="button2 " onClick={() => setTipe("Alquilar")}>
             Alquilar
           </button>
-          <button className="buttonMio" onClick={() => setTipe("Vender")}>
+          <button className="button2 " onClick={() => setTipe("Vender")}>
             Vender
           </button>
-          <button className="buttonMio" onClick={() => setTipe("Tasar")}>
+          <button className="button2 " onClick={() => setTipe("Tasar")}>
             Tasar
           </button>
         </div>

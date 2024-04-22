@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import Title from "./Title";
+import "./styles.scss";
 import Button2 from "./Button2";
 import Link from "next/link";
 const About = () => {
@@ -27,7 +27,9 @@ const About = () => {
         className={seIntersecto ? "about_div_animation about_div" : "about_div"}
         ref={elementoRef}
       >
-        <Title>NOSOTROS</Title>
+        <div className="class1">
+          <h2 className="class1Title color-fix ">Nosotros</h2>
+        </div>
         <div
           className={
             seIntersecto
@@ -35,7 +37,11 @@ const About = () => {
               : "about_div_info"
           }
         >
-          <div className={seIntersecto ? "info info_animation" : "info"}>
+          <div
+            className={
+              seIntersecto ? "info info_animation color-fix" : "info color-fix"
+            }
+          >
             <p>
               Somos una empresa familiar que, manteniendo los valores de
               nuestros fundadores en el centro de nuestras operaciones, nos

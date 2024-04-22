@@ -1,4 +1,4 @@
-// File: C:\Users\Anabel\Desktop\desarrollos webs\portugal\app\inmuebles\page.jsx
+// File: /Users/maurolobo/Programacion/Paginas Web/InmobiliariaFull/app/inmuebles/page.jsx
 import * as entry from '../../../../app/inmuebles/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

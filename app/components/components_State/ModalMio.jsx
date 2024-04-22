@@ -123,7 +123,6 @@ const ModalMio = ({ setModalShow, datosCard, setDatosCard, modalShow }) => {
                 Antiguedad:
                 {section.antiguedad === 0 ? " A estrenar" : section.antiguedad}
               </h5>
-              <h5 className="h5-modal">Escritura: FALTA</h5>
             </section>
             {description.length === 0 && sinDato ? (
               ""
@@ -294,8 +293,8 @@ const ModalMio = ({ setModalShow, datosCard, setDatosCard, modalShow }) => {
                 margin: "2rem 1rem 1rem 1rem",
               }}
             >
-              <button className="boton2" onClick={handleClose}>
-                cerrar
+              <button className="button2" onClick={handleClose}>
+                Cerrar
               </button>
             </div>
           </section>

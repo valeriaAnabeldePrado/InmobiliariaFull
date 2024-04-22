@@ -8,7 +8,7 @@ const ContyFooter = () => {
   return (
     <>
       <section className="cont-secciones">
-        <MediosContact />
+        <MediosContact color={"black"} />
         <Footer />
       </section>
     </>

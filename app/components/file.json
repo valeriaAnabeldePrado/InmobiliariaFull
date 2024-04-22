@@ -1,0 +1,296 @@
+{
+  "address": "Balcarce 520, nueva cordoba, cordoba",
+  "age": 0,
+  "bathroom_amount": 2,
+  "branch": {
+    "address": "",
+    "alternative_phone": "",
+    "alternative_phone_area": "",
+    "alternative_phone_country_code": "",
+    "alternative_phone_extension": "",
+    "branch_type": "Internal",
+    "contact_time": "",
+    "created_date": "2023-02-01T19:19:08",
+    "display_name": "Inmobiliaria Portugal",
+    "email": "inmobiliariaportugal@gmail.com",
+    "geo_lat": null,
+    "geo_long": null,
+    "gm_location_type": "UNKNOWN",
+    "id": 53019,
+    "is_default": true,
+    "logo": "https://static.tokkobroker.com/logos/32773/114426576490689881830233983404405947951354152369030563719455200947850170137045.jpg",
+    "name": "Inmobiliaria Portugal",
+    "pdf_footer_text": "",
+    "phone": "+543517633299",
+    "phone_area": "",
+    "phone_country_code": "",
+    "phone_extension": "",
+    "use_pdf_footer": false
+  },
+  "created_at": "2023-02-07T19:11:03",
+  "custom1": "0.00",
+  "custom_tags": [],
+  "deleted_at": "2023-04-20T18:50:18",
+  "depth_measure": "0.00",
+  "description": "CARACTERISTICAS: tipo duplex dos terrazas / balcón 2 baños -1 dormitorio con placard. \n-Cocina separada. \n-Living \n-Baño con ante baño en planta alta . \n-Pisos de porcelanato \n-A estrenar \n-",
+  "development": null,
+  "development_excel_extra_data": "[]",
+  "disposition": "Frente",
+  "expenses": 4000,
+  "extra_attributes": [],
+  "fake_address": "Balcarce 520, nueva cordoba, cordoba",
+  "files": [],
+  "floors_amount": 2,
+  "front_measure": "0.00",
+  "geo_lat": "-31.424753700000000",
+  "geo_long": "-64.178910399999990",
+  "gm_location_type": "BY_HAND",
+  "has_temporary_rent": false,
+  "id": 4859408,
+  "is_denounced": false,
+  "is_starred_on_web": false,
+  "legally_checked": "Desconocido",
+  "location": {
+    "divisions": [],
+    "full_location": "Argentina | Cordoba | Cordoba Capital | Nueva Cordoba",
+    "id": 51827,
+    "name": "Nueva Cordoba",
+    "parent_division": "/api/v1/location/30864/",
+    "short_location": "Cordoba | Cordoba Capital | Nueva Cordoba",
+    "state": null,
+    "weight": 25511
+  },
+  "occupation": [],
+  "operations": [
+    {
+      "operation_type": "Venta",
+      "prices": [
+        {
+          "currency": "USD",
+          "period": 0,
+          "price": 89500
+        }
+      ]
+    }
+  ],
+  "orientation": "Este",
+  "parking_lot_amount": 0,
+  "photos": [
+    {
+      "description": null,
+      "image": "https://static.tokkobroker.com/pictures/86880299516462005220922876363363598355296094112077415695102057863451786204259.jpeg",
+      "is_blueprint": false,
+      "is_front_cover": true,
+      "order": 0,
+      "original": "https://static.tokkobroker.com/original_pictures/86880299516462005220922876363363598355296094112077415695102057863451786204259.jpeg",
+      "thumb": "https://static.tokkobroker.com/thumbs/86880299516462005220922876363363598355296094112077415695102057863451786204259_thumb.jpeg"
+    },
+    {
+      "description": null,
+      "image": "https://static.tokkobroker.com/pictures/91503237500649976709422142738877698499335347285851498595692757292015425153084.jpeg",
+      "is_blueprint": false,
+      "is_front_cover": false,
+      "order": 1,
+      "original": "https://static.tokkobroker.com/original_pictures/91503237500649976709422142738877698499335347285851498595692757292015425153084.jpeg",
+      "thumb": "https://static.tokkobroker.com/thumbs/91503237500649976709422142738877698499335347285851498595692757292015425153084_thumb.jpeg"
+    },
+    {
+      "description": null,
+      "image": "https://static.tokkobroker.com/pictures/108017006859645148664039899975730324804163945036879352927548631315322741634114.jpeg",
+      "is_blueprint": false,
+      "is_front_cover": false,
+      "order": 2,
+      "original": "https://static.tokkobroker.com/original_pictures/108017006859645148664039899975730324804163945036879352927548631315322741634114.jpeg",
+      "thumb": "https://static.tokkobroker.com/thumbs/108017006859645148664039899975730324804163945036879352927548631315322741634114_thumb.jpeg"
+    },
+    {
+      "description": null,
+      "image": "https://static.tokkobroker.com/pictures/9314441861343043089509900952436700168023283510054069748645667458341296067563.jpeg",
+      "is_blueprint": false,
+      "is_front_cover": false,
+      "order": 3,
+      "original": "https://static.tokkobroker.com/original_pictures/9314441861343043089509900952436700168023283510054069748645667458341296067563.jpeg",
+      "thumb": "https://static.tokkobroker.com/thumbs/9314441861343043089509900952436700168023283510054069748645667458341296067563_thumb.jpeg"
+    },
+    {
+      "description": null,
+      "image": "https://static.tokkobroker.com/pictures/53204850752439354034973867961108140280673238458702618541400039672464484463875.jpeg",
+      "is_blueprint": false,
+      "is_front_cover": false,
+      "order": 4,
+      "original": "https://static.tokkobroker.com/original_pictures/53204850752439354034973867961108140280673238458702618541400039672464484463875.jpeg",
+      "thumb": "https://static.tokkobroker.com/thumbs/53204850752439354034973867961108140280673238458702618541400039672464484463875_thumb.jpeg"
+    },
+    {
+      "description": null,
+      "image": "https://static.tokkobroker.com/pictures/86482393253131523267176890102990035751109805853934737677484783053287696599311.jpeg",
+      "is_blueprint": false,
+      "is_front_cover": false,
+      "order": 5,
+      "original": "https://static.tokkobroker.com/original_pictures/86482393253131523267176890102990035751109805853934737677484783053287696599311.jpeg",
+      "thumb": "https://static.tokkobroker.com/thumbs/86482393253131523267176890102990035751109805853934737677484783053287696599311_thumb.jpeg"
+    },
+    {
+      "description": null,
+      "image": "https://static.tokkobroker.com/pictures/31629275931092366285615759642425273415069530729902793292930164714117065724600.jpeg",
+      "is_blueprint": false,
+      "is_front_cover": false,
+      "order": 6,
+      "original": "https://static.tokkobroker.com/original_pictures/31629275931092366285615759642425273415069530729902793292930164714117065724600.jpeg",
+      "thumb": "https://static.tokkobroker.com/thumbs/31629275931092366285615759642425273415069530729902793292930164714117065724600_thumb.jpeg"
+    },
+    {
+      "description": null,
+      "image": "https://static.tokkobroker.com/pictures/44184348704467984306536173122540633508815627680396896967557546369090461743185.jpeg",
+      "is_blueprint": false,
+      "is_front_cover": false,
+      "order": 7,
+      "original": "https://static.tokkobroker.com/original_pictures/44184348704467984306536173122540633508815627680396896967557546369090461743185.jpeg",
+      "thumb": "https://static.tokkobroker.com/thumbs/44184348704467984306536173122540633508815627680396896967557546369090461743185_thumb.jpeg"
+    },
+    {
+      "description": null,
+      "image": "https://static.tokkobroker.com/pictures/83468232260930278728043292503848032282162247377182279093868196812384130892871.jpeg",
+      "is_blueprint": false,
+      "is_front_cover": false,
+      "order": 8,
+      "original": "https://static.tokkobroker.com/original_pictures/83468232260930278728043292503848032282162247377182279093868196812384130892871.jpeg",
+      "thumb": "https://static.tokkobroker.com/thumbs/83468232260930278728043292503848032282162247377182279093868196812384130892871_thumb.jpeg"
+    },
+    {
+      "description": null,
+      "image": "https://static.tokkobroker.com/pictures/50801810146809851893190578331203479627851888104956812625785055628271377838524.jpeg",
+      "is_blueprint": false,
+      "is_front_cover": false,
+      "order": 9,
+      "original": "https://static.tokkobroker.com/original_pictures/50801810146809851893190578331203479627851888104956812625785055628271377838524.jpeg",
+      "thumb": "https://static.tokkobroker.com/thumbs/50801810146809851893190578331203479627851888104956812625785055628271377838524_thumb.jpeg"
+    },
+    {
+      "description": "",
+      "image": "https://static.tokkobroker.com/pictures/58940003034161879678655229429828589913822117816231240059670269089100555139828.jpg",
+      "is_blueprint": false,
+      "is_front_cover": false,
+      "order": 10,
+      "original": "https://static.tokkobroker.com/original_pictures/58940003034161879678655229429828589913822117816231240059670269089100555139828.jpg",
+      "thumb": "https://static.tokkobroker.com/thumbs/58940003034161879678655229429828589913822117816231240059670269089100555139828_thumb.jpg"
+    },
+    {
+      "description": "",
+      "image": "https://static.tokkobroker.com/pictures/60851805772960635008368443601183901110820736244893377729853296572940166063927.jpg",
+      "is_blueprint": false,
+      "is_front_cover": false,
+      "order": 11,
+      "original": "https://static.tokkobroker.com/original_pictures/60851805772960635008368443601183901110820736244893377729853296572940166063927.jpg",
+      "thumb": "https://static.tokkobroker.com/thumbs/60851805772960635008368443601183901110820736244893377729853296572940166063927_thumb.jpg"
+    },
+    {
+      "description": "",
+      "image": "https://static.tokkobroker.com/pictures/114384495669730322500494794244068025911779323976686593092878197585598787546874.jpg",
+      "is_blueprint": false,
+      "is_front_cover": false,
+      "order": 12,
+      "original": "https://static.tokkobroker.com/original_pictures/114384495669730322500494794244068025911779323976686593092878197585598787546874.jpg",
+      "thumb": "https://static.tokkobroker.com/thumbs/114384495669730322500494794244068025911779323976686593092878197585598787546874_thumb.jpg"
+    },
+    {
+      "description": "",
+      "image": "https://static.tokkobroker.com/pictures/113421059163449474865300346777461071340658961881299250344146463793358066412999.jpg",
+      "is_blueprint": false,
+      "is_front_cover": false,
+      "order": 13,
+      "original": "https://static.tokkobroker.com/original_pictures/113421059163449474865300346777461071340658961881299250344146463793358066412999.jpg",
+      "thumb": "https://static.tokkobroker.com/thumbs/113421059163449474865300346777461071340658961881299250344146463793358066412999_thumb.jpg"
+    }
+  ],
+  "portal_footer": "",
+  "producer": null,
+  "property_condition": "Excelente",
+  "public_url": "http://ficha.info/p/euyjIdwtFka5ba",
+  "publication_title": "VENTA DEPTO. 1 DORM. Balcarce rondeau Terraza duplex NUEVA CÓRDOBA A ESTRENAR!!",
+  "real_address": "Balcarce 520, nueva cordoba, cordoba",
+  "reference_code": "ZP-M-50038550",
+  "rich_description": "CARACTERISTICAS: tipo duplex dos terrazas / balcón 2 baños -1 dormitorio con placard. \n-Cocina separada. \n-Living \n-Baño con ante baño en planta alta . \n-Pisos de porcelanato \n-A estrenar \n-",
+  "roofed_surface": "70.00",
+  "room_amount": 3,
+  "semiroofed_surface": "0.00",
+  "situation": "Vacía ",
+  "status": 2,
+  "suite_amount": 1,
+  "surface": "0.00",
+  "surface_measurement": "HA",
+  "tags": [
+    {
+      "id": 1,
+      "name": "Agua Corriente",
+      "type": 1
+    },
+    {
+      "id": 2,
+      "name": "Cloaca",
+      "type": 1
+    },
+    {
+      "id": 3,
+      "name": "Gas Natural",
+      "type": 1
+    },
+    {
+      "id": 4,
+      "name": "Internet",
+      "type": 1
+    },
+    {
+      "id": 5,
+      "name": "Electricidad",
+      "type": 1
+    },
+    {
+      "id": 10,
+      "name": "Balcón",
+      "type": 2
+    },
+    {
+      "id": 12,
+      "name": "Cocina",
+      "type": 2
+    },
+    {
+      "id": 13,
+      "name": "Comedor",
+      "type": 2
+    },
+    {
+      "id": 22,
+      "name": "Living comedor",
+      "type": 2
+    },
+    {
+      "id": 26,
+      "name": "Toilette",
+      "type": 2
+    },
+    {
+      "id": 42,
+      "name": "Seguridad",
+      "type": 3
+    },
+    {
+      "id": 47,
+      "name": "Apto profesional",
+      "type": 3
+    }
+  ],
+  "toilet_amount": 0,
+  "total_surface": "70.00",
+  "transaction_requirements": "",
+  "type": {
+    "code": "AP",
+    "id": 2,
+    "name": "Departamento"
+  },
+  "unroofed_surface": "0.00",
+  "videos": [],
+  "web_price": true,
+  "zonification": ""
+}

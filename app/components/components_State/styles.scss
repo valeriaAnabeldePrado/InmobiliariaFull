@@ -63,31 +63,44 @@
 
 //--------------------MAINSTATE---------------------//
 .containerState {
-  background-color: $colorNegro;
+  background-color: $colorBlanco;
 }
 .containerSection {
   @include containerII;
 }
 .contIndividual {
   position: relative;
-  @include smallContainer(flex-end);
-  margin-bottom: 2rem;
+  max-width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media only screen and (max-width: 1199px) {
+    min-height: 60vh;
+    min-width: 40vh;
+  }
 }
 .img {
-  object-fit: fill;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 .contIndividualDos {
   @include smallContainer(space-around);
 }
 //-------------FILTROS SELECT-----------//
 .select-state {
-  background-color: $colorAmarillo;
+  background-color: $colorVerde;
   color: #fff;
-  padding: 17px;
+  padding: 1rem;
   border-radius: 5px;
   border-style: none;
   font-size: 1em;
+  border-radius: 20px;
   font-weight: bolder;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
 }
 
 .select-state:focus {
@@ -112,6 +125,7 @@
   max-width: 12rem;
 }
 .centrado {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,7 +133,7 @@
 }
 .sectionBotones {
   display: flex;
-  gap: 20px 30%;
+  justify-content: space-between;
   @media only screen and (max-width: 710px) {
     padding-top: 1.8rem;
     flex-direction: column;
@@ -131,9 +145,10 @@
 
 //---------------CONTAINER CARD----------------//
 .containerCard {
-  @include containerIII;
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
   transition: 0.5s ease-in-out;
 }
 .cardContainer {
@@ -307,7 +322,9 @@
   width: 100%;
   position: relative;
   .form-control:focus {
-    box-shadow: inset 0 0 0 #dbab1e, 5px 5px 10px -5px #dbab1e;
+    box-shadow:
+      inset 0 0 0 #dbab1e,
+      5px 5px 10px -5px #dbab1e;
     border: 1px solid #dbab1e;
   }
   .errorOk {
@@ -334,6 +351,7 @@
   }
   .btnlink {
     color: #fff;
+    text-decoration: none;
   }
   @media (max-width: 400px) {
     width: 5rem;
@@ -360,4 +378,80 @@
   @media (max-width: 420px) {
     margin: 0.5rem;
   }
+}
+
+// --------Last cards added----------//
+.card-outer {
+  width: 300px;
+  background-color: $colorVerde;
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.3);
+  p {
+    margin: 0;
+  }
+}
+
+.card-image-wrapper {
+  position: relative;
+  padding-top: 80%; /* Relación de aspecto */
+  width: auto;
+  height: auto;
+}
+.card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Para mantener la relación de aspecto */
+}
+.card-innter {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  h4 {
+    margin: 0;
+  }
+}
+.card-icons {
+  display: flex;
+  gap: 12px;
+}
+.card-description {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.card-button {
+  width: 100%;
+  button {
+    width: 100%;
+    margin: 0;
+    font-size: medium;
+  }
+}
+.card-title {
+  h4 {
+    font-size: large;
+  }
+}
+.card-h2 {
+  text-align: right;
+  margin: 0.8rem;
+
+  font-size: 1.3em;
+}
+.card-h2-container {
+  width: 100%;
+  background-color: $colorVerdeClaro;
+  position: absolute;
+  bottom: 0rem;
+}
+.color-fixw {
+  background-color: $colorAmarillo;
 }

@@ -28,6 +28,7 @@ const Filtros = () => {
         }
 
         const data = await response.json();
+
         setFiltroInmueble(data.objects);
       } catch (error) {
         console.error("Error de solicitud:", error);
@@ -116,12 +117,15 @@ const Filtros = () => {
         <option value="5">Cinco</option>
       </select>
       <section className="sectionBotones">
-        <button onClick={() => handleSearch(filtroInmueble)} className="boton">
-          BUSCAR
+        <button
+          onClick={() => handleSearch(filtroInmueble)}
+          className="button2 button-color-green"
+        >
+          Buscar
         </button>
 
         <button
-          className="boton"
+          className="button2 button-color-green"
           onClick={() => {
             setActivo(false);
             setTipo("");
@@ -130,7 +134,7 @@ const Filtros = () => {
             loadMore();
           }}
         >
-          <span className="spanB">BORRAR</span>
+          Borrar
         </button>
       </section>
     </>

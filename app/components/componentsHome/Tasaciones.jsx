@@ -2,9 +2,8 @@
 import React, { useEffect, useRef } from "react";
 import "./styles.scss";
 import Image from "next/image";
-import logo2 from "../../../public/Images/logo2.png";
+import logo2 from "/public/Images/yellowLogo.png";
 import Title from "./Title";
-import Button2 from "./Button2";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -85,7 +84,7 @@ const Tasaciones = () => {
         </p>
         <section>
           <Link ref={btnRef} href={"/contactate"}>
-            <Button2>Contactanos</Button2>
+            <button className="button2 button-color-green">Contactanos</button>
           </Link>
         </section>
       </div>

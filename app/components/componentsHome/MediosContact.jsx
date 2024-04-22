@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/all";
 import Title from "./Title";
 import Link from "next/link";
 
-const MediosContact = () => {
+const MediosContact = ({ color }) => {
   const refs = useRef([]);
   const container = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
@@ -20,7 +20,7 @@ const MediosContact = () => {
       duration: 1,
       scrollTrigger: {
         trigger: container.current,
-        scrub: true,
+        scrub: 2,
         start: "center bottom",
         end: "center center",
       },
@@ -42,16 +42,21 @@ const MediosContact = () => {
                 <Link
                   href={href}
                   passHref
-                  style={{ textDecoration: "none", color: "#fff" }}
+                  style={{
+                    textDecoration: "none",
+                    color: color || "white",
+                  }}
                 >
                   <Ico />
-                  <h6 style={{ padding: "1rem" }}>{h6}</h6>
+                  <h6 style={{ padding: "1rem", color: color || "white" }}>
+                    {h6}
+                  </h6>
                 </Link>
               ) : (
-                <>
+                <div style={{ color: color || "white" }}>
                   <Ico />
                   <h6>{h6}</h6>
-                </>
+                </div>
               )}
             </div>
           );

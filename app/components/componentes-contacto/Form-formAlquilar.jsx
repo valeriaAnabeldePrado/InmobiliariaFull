@@ -147,7 +147,7 @@ const FormAlquilar = () => {
               />
               {error.comments && <p className="errorOk">{error.comments}</p>}
             </div>
-            <button className="buttonMio" type="submit">
+            <button className="button2 color-fixw" type="submit">
               Enviar
             </button>
           </div>

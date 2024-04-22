@@ -1,21 +1,21 @@
 body {
   margin: 0;
   padding: 0;
-  scroll-behavior: none;
 }
 
 //--------------------VARIABLES-------------------//
 $fontFamili: "Avenir", sans-serif;
-
 $colorNegro: #262626;
 $colorAmarillo: #dbab1e;
-$colorBlanco: #fff;
-$colorVerde: #19573a;
+$colorBlanco: #e0e0e0;
+$colorVerde: #285437;
+$colorVerdeClaro: rgba(40, 84, 55, 0.6);
 $fontTamnio: clamp(1em, 3vw, 1.4em);
 $fontTamnio2: clamp(1em, 3vw, 1.1em);
 $fontTamnioBoton: clamp(1em, 2.5vw, 1.5em);
 .fondo {
-  background-color: $colorNegro;
+  background-color: $colorBlanco;
+  color: $colorNegro;
 }
 .cuerpo-main {
   position: relative;
@@ -24,7 +24,7 @@ $fontTamnioBoton: clamp(1em, 2.5vw, 1.5em);
 
 //--------------------MIXIN----------------------//
 @mixin containerII {
-  background-color: $colorNegro;
+  background-color: $colorBlanco;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -32,13 +32,13 @@ $fontTamnioBoton: clamp(1em, 2.5vw, 1.5em);
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: $colorBlanco;
+  color: $colorNegro;
   padding: 9% 1.5rem;
 }
 @mixin containerIII {
   display: flex;
   flex-direction: column;
-  background-color: $colorNegro;
+  background-color: $colorBlanco;
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -58,7 +58,7 @@ $fontTamnioBoton: clamp(1em, 2.5vw, 1.5em);
   }
 }
 @mixin titulos($tamanio, $margen, $largoLinea, $color) {
-  color: #fff;
+  color: $colorNegro;
   font-size: $tamanio;
   margin: $margen;
   position: relative;
@@ -133,7 +133,7 @@ $fontTamnioBoton: clamp(1em, 2.5vw, 1.5em);
   align-items: center;
 }
 @mixin containerCont {
-  color: #fff;
+  color: $colorNegro;
   min-height: 70vh;
   display: flex;
   align-items: center;
