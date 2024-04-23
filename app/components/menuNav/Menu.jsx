@@ -34,7 +34,7 @@ const Menu = () => {
   };
   return (
     <>
-      <main className="cont-main">
+      <section className="cont-main">
         <section onClick={handleClick} className="nav">
           <div
             style={{
@@ -47,8 +47,8 @@ const Menu = () => {
             <div
               className={activo ? "open icon nav-icon-5" : "icon nav-icon-5"}
             >
-              <span className="qw"></span>
               <span></span>
+              <span className="lmlk"></span>
               <span></span>
             </div>
           </section>
@@ -69,7 +69,7 @@ const Menu = () => {
             ))}
           </ul>
         </nav>
-      </main>
+      </section>
     </>
   );
 };

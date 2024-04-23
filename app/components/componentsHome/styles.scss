@@ -47,7 +47,7 @@
 .hero-logo {
   width: 800px;
   position: relative;
-  z-index: 99999999;
+  z-index: 80;
   @media only screen and (max-width: 900px) {
     width: 80vw;
   }
@@ -361,6 +361,13 @@
   .classTitle {
     font-size: clamp(2em, 5vw, 4em);
   }
+}
+.titleContacto {
+  color: $colorBlanco;
+  margin: 1rem 0;
+  position: relative;
+  letter-spacing: 2px;
+  font-size: clamp(2em, 5vw, 5em);
 }
 .class1 {
   color: $colorNegro;

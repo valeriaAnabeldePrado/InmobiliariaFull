@@ -29,7 +29,7 @@ const MediosContact = ({ color }) => {
 
   return (
     <div className="medios_container">
-      <Title>OTROS CANALES DE CONTACTO</Title>
+      <h2 className="titleContacto">OTROS CANALES DE CONTACTO</h2>
       <div ref={container} className="medios_icons_container">
         {Icons.map(({ Ico, h6, href }, index) => {
           return (
