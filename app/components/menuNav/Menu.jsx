@@ -47,7 +47,7 @@ const Menu = () => {
             <div
               className={activo ? "open icon nav-icon-5" : "icon nav-icon-5"}
             >
-              <span></span>
+              <span className="qw"></span>
               <span></span>
               <span></span>
             </div>
