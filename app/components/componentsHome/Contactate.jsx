@@ -10,10 +10,11 @@ const Contactate = () => {
       <div className="contact_container">
         <div className="contact_div tasas_ajust">
           <Title>CONTACTATE</Title>
-          <p>
+          <p className="aa">
             Estamos comprometidos en brindarte un servicio personalizado y
             eficiente. Completa el formulario y un asesor se comunicará contigo.
           </p>
+
           <section className="contForm"></section>
         </div>
         <div className="contact_div paddingg">
