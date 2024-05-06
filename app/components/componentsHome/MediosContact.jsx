@@ -4,7 +4,6 @@ import { Icons } from "./IconsVar";
 import "./styles.scss";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import Title from "./Title";
 import Link from "next/link";
 
 const MediosContact = ({ color }) => {
@@ -48,7 +47,13 @@ const MediosContact = ({ color }) => {
                   }}
                 >
                   <Ico />
-                  <h6 style={{ padding: "1rem", color: color || "white" }}>
+                  <h6
+                    style={{
+                      padding: "1rem",
+                      textDecoration: "none",
+                      color: color || "white",
+                    }}
+                  >
                     {h6}
                   </h6>
                 </Link>

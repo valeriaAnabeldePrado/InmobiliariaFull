@@ -43,6 +43,23 @@
   padding: 2rem;
   @media (max-width: 770px) {
     padding: 1rem;
+    flex-direction: column;
+  }
+}
+.botonetes {
+  font-size: $fontTamnioBoton;
+  text-align: center;
+  letter-spacing: 2px;
+  padding: 0.5rem 1rem;
+  width: 13rem;
+  margin: 1rem;
+  border: solid 4px #dbab1e;
+  background-color: $colorAmarillo;
+  border-radius: 30px;
+  color: #fff;
+  transition: 200ms ease-in-out;
+  &:hover {
+    box-shadow: 0 0 20px rgba(219, 171, 30, 0.7);
   }
 }
 .contenedor-formularios {
@@ -70,7 +87,7 @@
   width: 75vh;
   padding: 3rem;
   @media (max-width: 550px) {
-    padding: 2rem;
+    padding: 0.8rem;
   }
   .form-body {
     display: flex;
@@ -82,9 +99,7 @@
       width: 100%;
     }
     .inputs:focus {
-      box-shadow:
-        inset 0 0 0 #dbab1e,
-        5px 5px 10px -5px #dbab1e;
+      box-shadow: inset 0 0 0 #dbab1e, 5px 5px 10px -5px #dbab1e;
       border: 1px solid #dbab1e;
     }
     .texto-titulo {
@@ -105,6 +120,9 @@
   color: black;
   border: none;
   outline: none;
+  @media (max-width: 550px) {
+    margin: 0.5rem 0;
+  }
 }
 .errorOk {
   color: #fff;

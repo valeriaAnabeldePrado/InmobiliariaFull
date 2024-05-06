@@ -1,4 +1,3 @@
-import LenisWrapper from "./components/lenis-wrapper";
 import Menu from "./components/menuNav/Menu";
 import { Inter } from "next/font/google";
 
